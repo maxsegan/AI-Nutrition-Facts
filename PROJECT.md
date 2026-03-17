@@ -468,7 +468,53 @@ All subjective evaluations (sycophancy subtypes, political bias framing) should 
 
 ---
 
-## 7. Open Questions & Future Work
+## 7. Models to Evaluate
+
+### 7.1 Target Models
+
+The following models are to be evaluated for the Nutrition Facts label. No other models should be used as targets.
+
+| Provider | Model | Notes |
+|----------|-------|-------|
+| Anthropic | Claude Opus 4.6 | Frontier |
+| Anthropic | Claude Sonnet 4.6 | Mid-tier |
+| Anthropic | Claude Haiku 4.5 | Small |
+| OpenAI | GPT-5.4 Pro | Frontier |
+| OpenAI | GPT-5.4 | High-tier |
+| OpenAI | GPT-5 mini | Mid-tier |
+| OpenAI | GPT-5 nano | Small |
+| Google | Gemini 3 Pro | Frontier |
+| Google | Gemini 3.1 Pro | High-tier |
+| Google | Gemini 3 Flash | Fast |
+| Alibaba | Qwen3.5-397B-A17B | Large MoE |
+| Alibaba | Qwen3.5-27B | Mid-tier |
+| Alibaba | Qwen3.5-9B | Small |
+| DeepSeek | DeepSeek-V3.2 | Standard |
+| DeepSeek | DeepSeek-V3.2-Speciale | Enhanced |
+| Meta | Llama 4 Maverick | Large |
+| Meta | Llama 4 Scout | Small |
+| xAI | Grok 4.1 | Standard |
+| xAI | Grok 4.20 | Enhanced |
+| xAI | Grok 4.1 Fast | Fast |
+| Mistral | Mistral Large 3 | Large |
+| Mistral | Ministral 3 14B | Small |
+| Moonshot | Kimi K2.5 | |
+
+### 7.2 Judge Models
+
+All subjective evaluations use a three-judge panel from different providers:
+
+| Judge | Provider | Notes |
+|-------|----------|-------|
+| Claude Opus 4.6 | Anthropic | Primary judge |
+| GPT-5.4 Pro | OpenAI | Secondary judge |
+| Gemini 3 Pro (with thinking) | Google | Tertiary judge, uses extended thinking for deeper analysis |
+
+No other models should be used as judges.
+
+---
+
+## 8. Open Questions & Future Work
 
 1. **Normative baselines for political axes:** What should "center" mean, and who decides? The current approach reports position without judgment, but users may want a normative anchor. One option: report distance from median US voter, median EU voter, and global median, letting users choose their reference frame.
 
