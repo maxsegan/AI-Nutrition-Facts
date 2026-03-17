@@ -1,1 +1,8 @@
 .env
+.env.swp
+__pycache__/
+*.pyc
+eval/cache/
+eval/results/
+eval/errors/
+bench/app.log
