@@ -10,8 +10,17 @@
 {# ══ THE LABEL ══ #}
 <div class="label">
   <div class="label-header">
-    <div class="label-title">Nutrition Facts</div>
-    <div class="label-subtitle">{{ model_name }}</div>
+    <div class="flex justify-between items-center">
+      <div>
+        <div class="label-title">Nutrition Facts</div>
+        <div class="label-subtitle">{{ model_name }}</div>
+      </div>
+      {% if model_logo(model_name) %}
+      <img src="{{ model_logo(model_name) }}" alt="{{ family_display(model_name) }}"
+           style="height:32px; width:auto; opacity:0.6;">
+      {% endif %}
+    </div>
+    <div style="font-size:0.72rem; color:#888; margin-top:0.15rem;">{{ family_display(model_name) }}</div>
   </div>
   <div class="label-thick-rule"></div>
 
