@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% set title = "Compare Models" %}
+{% block content %}
+<h1>Compare Models</h1>
+<p class="muted small">Side-by-side comparison of all evaluated models.</p>
+
+{% set models = sycophancy.keys()|list %}
+{% if not models and not political %}
+<div class="card mt-2"><p class="muted">No results to compare. Run evaluations first.</p></div>
+{% else %}
+
+{# Sycophancy comparison #}
+{% if sycophancy %}
+<div class="section">
+  <h2>Sycophancy Comparison</h2>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th class="num">Aggregate</th>
+          <th class="num">Flattery</th>
+          <th class="num">Mirroring</th>
+          <th class="num">Influencability</th>
+          <th class="num">Conflict</th>
+          <th class="num">Demand</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name in sycophancy.keys()|sort %}
+        {% set d = sycophancy[model_name] %}
+        <tr>
+          <td><a href="{{ url_for('nutrition_label', model_name=model_name) }}">{{ model_name }}</a></td>
+          <td class="num"><span class="badge {{ sycophancy_badge(d.get('aggregate_score',0)) }}">{{ "%.1f"|format(d.get('aggregate_score',0)) }}</span></td>
+          {% for st in ['flattery','opinion_mirroring','influencability','conflict_avoidance','demand_compliance'] %}
+          {% set s = d.get('subtypes',{}).get(st,{}).get('overall_score',0) %}
+          <td class="num"><span class="badge {{ sycophancy_badge(s) }}">{{ "%.1f"|format(s) }}</span></td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{# Political comparison #}
+{% if political %}
+{% set pol_models = political.keys()|list|sort %}
+{% set first = political[pol_models[0]] if pol_models else {} %}
+{% set axes = first.get('domestic_axes',{}).keys()|list if first else [] %}
+
+{% if axes %}
+<div class="section">
+  <h2>Political Position Comparison</h2>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          {% for a in axes %}
+          <th class="num nowrap">{{ first.domestic_axes[a].get('axis_name',a)[:10] }}</th>
+          {% endfor %}
+          <th>Typology</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name in pol_models %}
+        {% set d = political[model_name] %}
+        <tr>
+          <td><a href="{{ url_for('nutrition_label', model_name=model_name) }}">{{ model_name }}</a></td>
+          {% for a in axes %}
+          {% set p = d.get('domestic_axes',{}).get(a,{}).get('position_score',0) %}
+          <td class="num"><span class="badge {{ political_badge(p) }}">{{ "%+.2f"|format(p) }}</span></td>
+          {% endfor %}
+          <td class="small">
+            {% if d.get('typology_matches') %}{{ d.typology_matches[0].typology }}{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endif %}
+
+{# Supplementary comparison #}
+{% if supplementary %}
+<div class="section">
+  <h2>Supplementary Metrics</h2>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th class="num">Tok/s</th>
+          <th class="num">Avg ms</th>
+          <th class="num">Verbosity</th>
+          <th class="num">Consistency</th>
+          <th class="num">Eff. Cost $/MT</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name in supplementary.keys()|sort %}
+        {% set d = supplementary[model_name] %}
+        <tr>
+          <td>{{ model_name }}</td>
+          <td class="num mono">{{ d.get('speed',{}).get('avg_tps','—') }}</td>
+          <td class="num mono">{{ d.get('speed',{}).get('avg_response_ms','—') }}</td>
+          <td class="num mono">{{ d.get('verbosity',{}).get('avg_verbosity_ratio','—') }}x</td>
+          <td class="num mono">{{ "%.3f"|format(d.get('prompt_sensitivity',{}).get('avg_consistency',0)) if 'prompt_sensitivity' in d else '—' }}</td>
+          <td class="num mono">{{ d.get('cost',{}).get('effective_output_cost_per_mtok','—') }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}

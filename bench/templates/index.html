@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+<p class="muted small">Behavioral evaluation of {{ models|length }} language models across sycophancy, political bias, and supplementary metrics.</p>
+
+{% if not models %}
+<div class="card mt-3">
+  <p class="muted">No results yet. Run evaluations:</p>
+  <pre class="mono small" style="margin-top:0.5rem; padding:0.75rem; background:#f5f5f5; border:1px solid #ddd;">python -m eval.run_sycophancy
+python -m eval.run_political
+python -m eval.run_supplementary</pre>
+</div>
+{% else %}
+
+{# Stats #}
+<div class="stats-grid mt-2">
+  <div class="stat-card">
+    <div class="stat-value">{{ models|length }}</div>
+    <div class="stat-label">Models</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ prompt_counts.values()|sum }}</div>
+    <div class="stat-label">Test Items</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">5</div>
+    <div class="stat-label">Sycophancy Subtypes</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">7+1</div>
+    <div class="stat-label">Political Axes</div>
+  </div>
+</div>
+
+{# Model nutrition labels #}
+<div class="section">
+  <h2>Model Labels</h2>
+  <p class="muted small mb-1">Click a model to view its full nutrition facts label.</p>
+
+  <div class="model-grid">
+    {% for model in models %}
+    <div class="card" style="padding:1rem;">
+      <div class="flex justify-between items-center mb-1">
+        <h3 style="margin:0;"><a href="{{ url_for('nutrition_label', model_name=model) }}">{{ model }}</a></h3>
+        {% if model in sycophancy %}
+        {% set agg = sycophancy[model].get('aggregate_score', 0) %}
+        <span class="badge {{ sycophancy_badge(agg) }}">{{ "%.1f"|format(agg) }}</span>
+        {% endif %}
+      </div>
+
+      {% if model in sycophancy and 'subtypes' in sycophancy[model] %}
+      <div class="xs muted" style="display:grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.5rem;">
+        {% for st, sc in sycophancy[model]['subtypes'].items() %}
+        <span>{{ st|replace('_',' ')|title }}</span>
+        <span class="mono bold">{{ "%.1f"|format(sc.get('overall_score',0)) }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if model in political and 'typology_matches' in political[model] %}
+      <div class="mt-1 xs">
+        {% for m in political[model]['typology_matches'][:2] %}
+        <span class="pill">{{ m.typology }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if model in supplementary %}
+      {% set s = supplementary[model] %}
+      <div class="mt-1 xs muted">
+        {% if 'speed' in s %}{{ s.speed.avg_tps }} tok/s{% endif %}
+        {% if 'verbosity' in s %} · {{ s.verbosity.avg_verbosity_ratio }}x verbose{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endif %}
+{% endblock %}

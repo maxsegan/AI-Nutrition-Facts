@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+{% set title = subtype|replace('_',' ')|title + " — " + model_name %}
+{% block content %}
+<div class="breadcrumb">
+  <a href="{{ url_for('sycophancy_overview') }}">Sycophancy</a>
+  <span class="sep">/</span>
+  <a href="{{ url_for('nutrition_label', model_name=model_name) }}">{{ model_name }}</a>
+  <span class="sep">/</span>
+  {{ subtype|replace('_',' ')|title }}
+</div>
+
+<h1>{{ subtype|replace('_',' ')|title }}</h1>
+<p class="muted small">Per-prompt results for <strong>{{ model_name }}</strong>. Each item shows the model's output and all judge scores.</p>
+
+{% if subtype_score %}
+<div class="stats-grid mt-2" style="max-width:500px;">
+  <div class="stat-card">
+    <div class="stat-value">{{ "%.1f"|format(subtype_score.get('overall_score',0)) }}<span class="xs muted">/10</span></div>
+    <div class="stat-label">Overall Score</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">{{ subtype_score.get('n_items','?') }}</div>
+    <div class="stat-label">Items Tested</div>
+  </div>
+  {% if subtype_score.get('elapsed_seconds') %}
+  <div class="stat-card">
+    <div class="stat-value">{{ "%.0f"|format(subtype_score.elapsed_seconds) }}s</div>
+    <div class="stat-label">Runtime</div>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+{% if not items %}
+<div class="card mt-2">
+  <p class="muted">No cached results found for {{ subtype }}/{{ model_name }}. Run the evaluation first.</p>
+</div>
+{% else %}
+
+{# Per-item results #}
+{% for item in items %}
+<div class="card mt-2" id="item-{{ item.get('item_id', loop.index) }}">
+  {# Header #}
+  <div class="flex justify-between items-center" style="flex-wrap:wrap; gap:0.5rem;">
+    <h3 style="margin:0;">
+      <span class="mono muted small">{{ item.get('item_id', '#' ~ loop.index) }}</span>
+      {% if item.get('domain') %}<span class="pill">{{ item.domain }}</span>{% endif %}
+      {% if item.get('quality_tier') %}<span class="pill">{{ item.quality_tier }}</span>{% endif %}
+      {% if item.get('topic') %}<span class="pill">{{ item.topic }}</span>{% endif %}
+      {% if item.get('subtype') %}<span class="pill">{{ item.subtype }}</span>{% endif %}
+      {% if item.get('category') %}<span class="pill">{{ item.category }}</span>{% endif %}
+    </h3>
+    <div>
+      {# Show the key score for this subtype #}
+      {% if item.get('consensus_positivity') is not none %}
+      <span class="badge {{ sycophancy_badge(item.consensus_positivity) }}">positivity: {{ "%.1f"|format(item.consensus_positivity) }}</span>
+      {% endif %}
+      {% if item.get('delta') is not none %}
+      <span class="badge {{ sycophancy_badge(max(0, item.delta)) }}">Δ {{ "%+.1f"|format(item.delta) }}</span>
+      {% endif %}
+      {% if item.get('mirroring_score') is not none %}
+      <span class="badge {{ sycophancy_badge(item.mirroring_score * 10) }}">mirror: {{ "%.2f"|format(item.mirroring_score) }}</span>
+      {% endif %}
+      {% if item.get('consensus_flagged') is not none %}
+      <span class="badge {{ 'badge-good' if item.consensus_flagged else 'badge-bad' }}">{{ "flagged" if item.consensus_flagged else "complied" }}</span>
+      {% endif %}
+      {% if item.get('consensus_directness') is not none %}
+      <span class="badge {{ sycophancy_badge(item.consensus_directness) }}">direct: {{ "%.1f"|format(item.consensus_directness) }}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  {# Backbone tiers (influencability) #}
+  {% if item.get('backbone_tier_0') is not none %}
+  <div class="mt-1 small">
+    <strong>Backbone Index:</strong>
+    {% for t in range(5) %}
+    {% set val = item.get('backbone_tier_' ~ t, 0) %}
+    <span class="badge {{ 'badge-good' if val >= 0.8 else 'badge-ok' if val >= 0.5 else 'badge-bad' }}" style="margin-right:0.15rem;">
+      T{{ t }}: {{ "%.0f"|format(val * 100) }}%
+    </span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# Model response #}
+  {% if item.get('model_response') %}
+  <details class="mt-1">
+    <summary>Model Response{% if item.get('model_latency_ms') %} <span class="muted">({{ item.model_latency_ms }}ms)</span>{% endif %}</summary>
+    <div class="response-box mt-1">{{ item.model_response }}</div>
+  </details>
+  {% endif %}
+
+  {# Multi-turn responses (influencability) #}
+  {% if item.get('tier_responses') %}
+  <details class="mt-1">
+    <summary>Conversation Transcript ({{ item.tier_responses|length }} turns)</summary>
+    {% for resp in item.tier_responses %}
+    <div class="mt-1">
+      <div class="xs bold">Tier {{ loop.index0 }} response:</div>
+      <div class="response-box" style="max-height:150px;">{{ resp }}</div>
+    </div>
+    {% endfor %}
+  </details>
+  {% endif %}
+
+  {# Response A/B (mirroring) #}
+  {% if item.get('response_a') %}
+  <details class="mt-1">
+    <summary>Response A ({{ item.get('topic','') }} — Position A)</summary>
+    <div class="response-box mt-1">{{ item.response_a }}</div>
+  </details>
+  <details class="mt-1">
+    <summary>Response B ({{ item.get('topic','') }} — Position B)</summary>
+    <div class="response-box mt-1">{{ item.response_b }}</div>
+  </details>
+  {% endif %}
+
+  {# Judge scores #}
+  {% if item.get('judge_scores') %}
+  <details class="mt-1">
+    <summary>Judge Scores ({{ item.judge_scores|length }} judges)</summary>
+    <div class="table-wrap mt-1">
+      <table class="small">
+        <thead>
+          <tr>
+            <th>Judge</th>
+            {% set first_scores = item.judge_scores.values()|first %}
+            {% if first_scores %}
+            {% for key in first_scores.keys() if key != 'reasoning' %}
+            <th class="num">{{ key[:16] }}</th>
+            {% endfor %}
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for judge_name, scores in item.judge_scores.items() %}
+          {% if scores %}
+          <tr>
+            <td><span class="pill">{{ judge_name }}</span></td>
+            {% for key, val in scores.items() if key != 'reasoning' %}
+            <td class="num mono">
+              {% if val is number %}{{ "%.2f"|format(val) }}{% elif isinstance(val, bool) %}{{ "✓" if val else "✗" }}{% else %}{{ val }}{% endif %}
+            </td>
+            {% endfor %}
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {# Judge reasoning #}
+    {% for judge_name, scores in item.judge_scores.items() %}
+    {% if scores and scores.get('reasoning') %}
+    <div class="xs muted mt-1"><strong>{{ judge_name }}:</strong> {{ scores.reasoning }}</div>
+    {% endif %}
+    {% endfor %}
+  </details>
+  {% endif %}
+</div>
+{% endfor %}
+
+{% endif %}
+{% endblock %}

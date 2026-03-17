@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+{% set title = model_name + " — Nutrition Label" %}
+{% block content %}
+<div class="breadcrumb">
+  <a href="{{ url_for('index') }}">Dashboard</a><span class="sep">/</span>{{ model_name }}
+</div>
+
+<div class="flex gap-1" style="flex-wrap:wrap; align-items:flex-start;">
+
+{# ══ THE LABEL ══ #}
+<div class="label">
+  <div class="label-header">
+    <div class="label-title">Nutrition Facts</div>
+    <div class="label-subtitle">{{ model_name }}</div>
+  </div>
+  <div class="label-thick-rule"></div>
+
+  {# Sycophancy section #}
+  {% if sycophancy %}
+  <div class="label-section">
+    <div class="label-row">
+      <span class="name bold">Sycophancy</span>
+      <span class="value">{{ "%.1f"|format(sycophancy.get('aggregate_score', 0)) }}/10</span>
+    </div>
+  </div>
+  <div class="label-thin-rule"></div>
+  {% if 'subtypes' in sycophancy %}
+  <div class="label-section">
+    {% for st, sc in sycophancy['subtypes'].items() %}
+    <div class="label-row indent">
+      <span class="name">{{ st|replace('_',' ')|title }}</span>
+      <span class="value">{{ "%.1f"|format(sc.get('overall_score',0)) }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="label-thin-rule"></div>
+  {% endif %}
+  {% endif %}
+
+  {# Political section #}
+  {% if political and 'domestic_axes' in political %}
+  <div class="label-section">
+    <div class="label-row">
+      <span class="name bold">Political Orientation</span>
+      <span class="value"></span>
+    </div>
+  </div>
+  <div class="label-thin-rule"></div>
+  <div class="label-section">
+    {% for axis_id, scores in political['domestic_axes'].items() %}
+    <div class="label-row indent">
+      <span class="name">{{ scores.get('axis_name', axis_id) }}</span>
+      <span class="value">{{ "%+.2f"|format(scores.get('position_score',0)) }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="label-thin-rule"></div>
+  {% endif %}
+
+  {# Geopolitical section #}
+  {% if political and 'geopolitical' in political %}
+  <div class="label-section">
+    <div class="label-row">
+      <span class="name bold">Geopolitical Affinity</span>
+      <span class="value"></span>
+    </div>
+  </div>
+  <div class="label-thin-rule"></div>
+  <div class="label-section">
+    {% for bloc, score in political['geopolitical']['affinity_scores'].items() %}
+    <div class="label-row indent">
+      <span class="name">{{ bloc }}</span>
+      <span class="value">{{ "%.2f"|format(score) }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="label-thin-rule"></div>
+  {% endif %}
+
+  {# Supplementary section #}
+  {% if supplementary %}
+  <div class="label-thick-rule"></div>
+  <div class="label-section">
+    {% if 'speed' in supplementary %}
+    <div class="label-row">
+      <span class="name">Tokens / sec</span>
+      <span class="value">{{ supplementary.speed.avg_tps }}</span>
+    </div>
+    <div class="label-row">
+      <span class="name">Avg Response</span>
+      <span class="value">{{ supplementary.speed.avg_response_ms }}ms</span>
+    </div>
+    {% endif %}
+    {% if 'verbosity' in supplementary %}
+    <div class="label-row">
+      <span class="name">Verbosity Ratio</span>
+      <span class="value">{{ supplementary.verbosity.avg_verbosity_ratio }}x</span>
+    </div>
+    {% endif %}
+    {% if 'cost' in supplementary %}
+    <div class="label-row">
+      <span class="name">Input Cost</span>
+      <span class="value">${{ supplementary.cost.get('input_cost_per_mtok','?') }}/MT</span>
+    </div>
+    <div class="label-row">
+      <span class="name">Effective Output Cost</span>
+      <span class="value">${{ supplementary.cost.get('effective_output_cost_per_mtok','?') }}/MT</span>
+    </div>
+    {% endif %}
+    {% if 'prompt_sensitivity' in supplementary %}
+    <div class="label-row">
+      <span class="name">Prompt Consistency</span>
+      <span class="value">{{ "%.3f"|format(supplementary.prompt_sensitivity.avg_consistency) }}</span>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {# Typology footer #}
+  {% if political and 'typology_matches' in political %}
+  <div class="label-thick-rule"></div>
+  <div class="label-footer">
+    <strong>Closest typologies:</strong>
+    {% for m in political['typology_matches'][:3] %}
+    {{ m.typology }} ({{ "%.3f"|format(m.distance) }}){% if not loop.last %}, {% endif %}
+    {% endfor %}
+    <br>
+    <em>Scores: sycophancy 0=ideal, 10=worst. Political position -1.0 to +1.0 (0=neutral). Geopolitical affinity 0-1 (0.5=neutral).</em>
+  </div>
+  {% endif %}
+</div>
+
+{# ══ DETAILED BREAKDOWNS ══ #}
+<div style="flex:1; min-width:400px;">
+
+  {# Political diverging bars #}
+  {% if political and 'domestic_axes' in political %}
+  <div class="card mb-1" style="margin-bottom:1.25rem;">
+    <div class="card-header">Political Axes — Position Scores</div>
+    {% for axis_id, scores in political['domestic_axes'].items() %}
+    {% set pos = scores.get('position_score', 0) %}
+    <div class="dbar">
+      <div class="dbar-label">{{ scores.get('axis_name', axis_id) }}</div>
+      <div class="dbar-track">
+        <div class="dbar-center"></div>
+        {% if pos < 0 %}
+        <div class="dbar-fill left" style="width: {{ (pos|abs) * 50 }}%;"></div>
+        {% else %}
+        <div class="dbar-fill right" style="width: {{ pos * 50 }}%;"></div>
+        {% endif %}
+      </div>
+      <div class="dbar-val">{{ "%+.2f"|format(pos) }}</div>
+    </div>
+    {% endfor %}
+    <div class="dbar-poles"><span>Pole A</span><span>Pole B</span></div>
+  </div>
+  {% endif %}
+
+  {# Geopolitical bars #}
+  {% if political and 'geopolitical' in political %}
+  <div class="card" style="margin-bottom:1.25rem;">
+    <div class="card-header">Geopolitical Affinity</div>
+    {% for bloc, score in political['geopolitical']['affinity_scores'].items() %}
+    <div class="gbar">
+      <div class="gbar-label">{{ bloc }}</div>
+      <div class="gbar-track"><div class="gbar-fill" style="width:{{ score * 100 }}%"></div></div>
+      <div class="gbar-val">{{ "%.2f"|format(score) }}</div>
+    </div>
+    {% endfor %}
+    <div class="xs muted mt-1">Evasiveness: {{ "%.2f"|format(political.geopolitical.get('avg_evasiveness',0)) }}</div>
+  </div>
+  {% endif %}
+
+  {# Inter-judge agreement #}
+  {% if political and 'inter_judge_agreement' in political %}
+  <div class="card" style="margin-bottom:1.25rem;">
+    <div class="card-header">Inter-Judge Agreement</div>
+    <p class="small">
+      Fleiss' κ = <strong class="mono">{{ political.inter_judge_agreement.get('fleiss_kappa', 'N/A') }}</strong>
+      ({{ political.inter_judge_agreement.get('interpretation', '') }})
+      — {{ political.inter_judge_agreement.get('n_items', 0) }} items
+    </p>
+  </div>
+  {% endif %}
+
+</div>
+</div>
+
+{# Sycophancy links to per-prompt detail #}
+{% if sycophancy and 'subtypes' in sycophancy %}
+<div class="section">
+  <h2>Sycophancy — Per-Prompt Results</h2>
+  <p class="muted small">Click a subtype to inspect every prompt, model output, and judge scores.</p>
+  <div class="stats-grid mt-1">
+    {% for st, sc in sycophancy['subtypes'].items() %}
+    <a href="{{ url_for('sycophancy_detail', subtype=st, model_name=model_name) }}" class="stat-card" style="text-decoration:none; color:inherit;">
+      <div class="stat-value">{{ "%.1f"|format(sc.get('overall_score',0)) }}</div>
+      <div class="stat-label">{{ st|replace('_',' ') }}</div>
+      <div class="xs muted">{{ sc.get('n_items','?') }} items →</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{# Political links to per-prompt detail #}
+{% if political and 'domestic_axes' in political %}
+<div class="section">
+  <h2>Political — Per-Prompt Results</h2>
+  <div class="stats-grid mt-1">
+    {% for axis_id, scores in political['domestic_axes'].items() %}
+    <a href="{{ url_for('political_detail', axis_id=axis_id, model_name=model_name) }}" class="stat-card" style="text-decoration:none; color:inherit;">
+      <div class="stat-value mono">{{ "%+.2f"|format(scores.get('position_score',0)) }}</div>
+      <div class="stat-label">{{ scores.get('axis_name', axis_id) }}</div>
+      <div class="xs muted">{{ scores.get('n_items','?') }} items →</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endblock %}

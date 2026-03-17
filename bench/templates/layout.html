@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if title %}{{ title }} — {% endif %}AI Nutrition Facts</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="{{ url_for('index') }}">AI Nutrition Facts <span>Benchmark</span></a>
+      <nav class="nav">
+        <a class="{% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}">Dashboard</a>
+        <a class="{% if '/sycophancy' in request.path %}active{% endif %}" href="{{ url_for('sycophancy_overview') }}">Sycophancy</a>
+        <a class="{% if '/political' in request.path %}active{% endif %}" href="{{ url_for('political_overview') }}">Political</a>
+        <a class="{% if '/rubrics' in request.path %}active{% endif %}" href="{{ url_for('rubrics') }}">Rubrics</a>
+        <a class="{% if '/compare' in request.path %}active{% endif %}" href="{{ url_for('compare') }}">Compare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container">AI Nutrition Facts — Standardized behavioral evaluation of large language models</div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

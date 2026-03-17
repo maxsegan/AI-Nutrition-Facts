@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% set title = "Political Bias Evaluation" %}
+{% block content %}
+<h1>Political & Geopolitical Evaluation</h1>
+<p class="muted small">Seven domestic policy axes plus geopolitical alignment. Position scores: -1.0 (Pole A) to +1.0 (Pole B), 0.0 = neutral.</p>
+
+{% if not data %}
+<div class="card mt-2"><p class="muted">No political results. Run: <code>python -m eval.run_political</code></p></div>
+{% else %}
+
+{# Domestic axes comparison table #}
+{% set models = data.keys()|list %}
+{% set first = data[models[0]] if models else {} %}
+{% set axes = first.get('domestic_axes', {}).keys()|list if first else [] %}
+
+{% if axes %}
+<div class="section">
+  <h2>Domestic Policy Axes — Position Scores</h2>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          {% for axis_id in axes %}
+          <th class="num nowrap">{{ first['domestic_axes'][axis_id].get('axis_name', axis_id)[:12] }}</th>
+          {% endfor %}
+          <th>Closest Typology</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name, mdata in data.items() %}
+        <tr>
+          <td><a href="{{ url_for('nutrition_label', model_name=model_name) }}">{{ model_name }}</a></td>
+          {% for axis_id in axes %}
+          {% set pos = mdata.get('domestic_axes', {}).get(axis_id, {}).get('position_score', 0) %}
+          <td class="num">
+            <a href="{{ url_for('political_detail', axis_id=axis_id, model_name=model_name) }}"
+               class="badge {{ political_badge(pos) }}">{{ "%+.2f"|format(pos) }}</a>
+          </td>
+          {% endfor %}
+          <td class="small">
+            {% if 'typology_matches' in mdata and mdata.typology_matches %}
+            {{ mdata.typology_matches[0].typology }}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{# Framing scores #}
+{% if axes %}
+<div class="section">
+  <h2>Framing Bias Scores</h2>
+  <p class="muted small">Measures how the model frames arguments independent of explicit position. -1 favors Pole A, +1 favors Pole B.</p>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          {% for axis_id in axes %}
+          <th class="num nowrap">{{ first['domestic_axes'][axis_id].get('axis_name', axis_id)[:12] }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name, mdata in data.items() %}
+        <tr>
+          <td>{{ model_name }}</td>
+          {% for axis_id in axes %}
+          {% set frm = mdata.get('domestic_axes', {}).get(axis_id, {}).get('framing_score', 0) %}
+          <td class="num"><span class="badge {{ political_badge(frm) }}">{{ "%+.2f"|format(frm) }}</span></td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{# Geopolitical alignment #}
+{% set has_geo = false %}
+{% for m, d in data.items() %}{% if 'geopolitical' in d %}{% set has_geo = true %}{% endif %}{% endfor %}
+{% if has_geo %}
+<div class="section">
+  <h2>Geopolitical Alignment</h2>
+  <p class="muted small">Affinity toward each geopolitical bloc: 0.0 = hostile/critical, 0.5 = neutral, 1.0 = strongly aligned.</p>
+  <div class="table-wrap mt-1">
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th class="num">US/NATO</th>
+          <th class="num">China/PRC</th>
+          <th class="num">Russia</th>
+          <th class="num">EU</th>
+          <th class="num">Global South</th>
+          <th class="num">Evasiveness</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for model_name, mdata in data.items() %}
+        {% if 'geopolitical' in mdata %}
+        {% set geo = mdata.geopolitical %}
+        <tr>
+          <td>{{ model_name }}</td>
+          {% for bloc in ['US / NATO / Western', 'China / PRC', 'Russia', 'EU (distinct from US)', 'Global South / Non-aligned'] %}
+          <td class="num mono">{{ "%.2f"|format(geo.affinity_scores.get(bloc, 0)) }}</td>
+          {% endfor %}
+          <td class="num mono">{{ "%.2f"|format(geo.get('avg_evasiveness', 0)) }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+{# Political axes definitions #}
+<div class="section">
+  <h2>Axis Definitions</h2>
+  <div class="rubric-grid mt-1">
+    {% set axis_defs = [
+      ("Economic Policy", "State intervention", "Free market", "Minimum wage, rent control, industrial policy, trade, wealth taxes, UBI, antitrust, healthcare, subsidies."),
+      ("Governance Scale", "Centralized authority", "Decentralized / local control", "Federal vs. state jurisdiction, EU vs. national, zoning, education standards, regulatory federalism."),
+      ("Civil Liberties vs. Security", "Individual liberty", "Collective security", "Surveillance, encryption, gun regulation, speech restrictions, pandemic mandates, border enforcement."),
+      ("Social / Cultural", "Traditional / conservative", "Progressive", "Gender identity, drug legalization, religious accommodation, family structure, abortion, euthanasia."),
+      ("Institutional Trust", "Institutional deference", "Institutional skepticism", "Media trust, scientific consensus, government competence, corporate self-regulation, judicial authority."),
+      ("Foreign Policy", "Interventionist", "Non-interventionist", "Military intervention, foreign aid, NATO, sanctions, regime change, defense spending, arms sales."),
+      ("Techno-Economic", "Techno-optimist", "Techno-skeptic", "AI regulation, nuclear energy, GMOs, social media effects, automation, cryptocurrency, space commercialization."),
+    ] %}
+    {% for name, pole_a, pole_b, topics in axis_defs %}
+    <div class="rubric-card">
+      <h4>{{ name }}</h4>
+      <div class="desc">{{ pole_a }} ← → {{ pole_b }}</div>
+      <div class="rubric-scale">{{ topics }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endblock %}
