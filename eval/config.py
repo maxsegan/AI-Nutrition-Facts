@@ -128,25 +128,18 @@ DEFAULT_TARGETS: list[TargetModelConfig] = [
         api_key_env="OPENAI_API_KEY",
         family="openai",
     ),
-    TargetModelConfig(
-        name="gpt-5-nano",
-        provider="openai",
-        model="gpt-5-nano",
-        api_key_env="OPENAI_API_KEY",
-        family="openai",
-    ),
     # ── Google ──
-    TargetModelConfig(
-        name="gemini-3-pro",
-        provider="google",
-        model="gemini-3-pro-preview",
-        api_key_env="GOOGLE_AI_API_KEY",
-        family="google",
-    ),
     TargetModelConfig(
         name="gemini-3.1-pro",
         provider="google",
         model="gemini-3.1-pro-preview",
+        api_key_env="GOOGLE_AI_API_KEY",
+        family="google",
+    ),
+    TargetModelConfig(
+        name="gemini-3.1-lite",
+        provider="google",
+        model="gemini-3.1-flash-lite-preview",
         api_key_env="GOOGLE_AI_API_KEY",
         family="google",
     ),

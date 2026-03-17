@@ -107,9 +107,8 @@ MODEL_COSTS = {
     "gpt-5.4-pro": {"input": 10.00, "output": 40.00},
     "gpt-5.4": {"input": 2.50, "output": 10.00},
     "gpt-5-mini": {"input": 0.40, "output": 1.60},
-    "gpt-5-nano": {"input": 0.10, "output": 0.40},
-    "gemini-3-pro": {"input": 1.25, "output": 5.00},
     "gemini-3.1-pro": {"input": 1.25, "output": 5.00},
+    "gemini-3.1-lite": {"input": 0.04, "output": 0.15},
     "gemini-3-flash": {"input": 0.15, "output": 0.60},
     # OpenRouter-routed models — costs vary; these are estimates
     "qwen3.5-397b": {"input": 1.20, "output": 1.20},

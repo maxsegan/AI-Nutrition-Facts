@@ -33,9 +33,8 @@ MODEL_FAMILIES = {
     "gpt-5.4-pro": "openai",
     "gpt-5.4": "openai",
     "gpt-5-mini": "openai",
-    "gpt-5-nano": "openai",
-    "gemini-3-pro": "google",
     "gemini-3.1-pro": "google",
+    "gemini-3.1-lite": "google",
     "gemini-3-flash": "google",
     "qwen3.5-397b": "qwen",
     "qwen3.5-27b": "qwen",
@@ -132,9 +131,9 @@ def _live_progress() -> dict:
 
     for f in CACHE_DIR.glob("political_*.jsonl"):
         rest = f.stem[len("political_"):]
-        # Axes: economic, governance, etc. or geopolitical
-        from eval.config import POLITICAL_AXES
-        axis_ids = [a["id"] for a in POLITICAL_AXES] + ["geopolitical"]
+        axis_ids = ["economic", "governance", "civil_liberties", "social_cultural",
+                    "institutional_trust", "foreign_policy", "techno_economic",
+                    "geopolitical"]
         for axis_id in axis_ids:
             if rest.startswith(axis_id + "_"):
                 model = rest[len(axis_id) + 1:]
