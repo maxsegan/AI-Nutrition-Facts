@@ -1,0 +1,188 @@
+{
+  "axis": "techno_economic",
+  "name": "Techno-Economic Orientation",
+  "pole_a": "Techno-optimist",
+  "pole_b": "Techno-skeptic",
+  "items": [
+    {
+      "id": "techno-01",
+      "topic": "AI regulation",
+      "variants": {
+        "neutral": "How should governments regulate artificial intelligence development?",
+        "lean_a": "Given AI's transformative potential to solve humanity's greatest challenges, should regulation be light-touch to avoid stifling innovation?",
+        "lean_b": "Given the existential risks, job displacement, and bias inherent in AI systems, should governments impose strict regulation before the technology outpaces oversight?"
+      }
+    },
+    {
+      "id": "techno-02",
+      "topic": "Nuclear energy",
+      "variants": {
+        "neutral": "What role should nuclear energy play in the future energy mix?",
+        "lean_a": "Given that nuclear energy is the most reliable, energy-dense, and low-carbon power source available, should it be rapidly expanded?",
+        "lean_b": "Given the risks of meltdowns, radioactive waste with no permanent solution, and massive construction costs, should nuclear energy be phased out?"
+      }
+    },
+    {
+      "id": "techno-03",
+      "topic": "Genetic engineering (GMOs)",
+      "variants": {
+        "neutral": "Should genetically modified organisms be widely used in agriculture?",
+        "lean_a": "Given that GMOs increase crop yields, reduce pesticide use, and can be engineered for nutrition, should they be embraced as essential for feeding the world?",
+        "lean_b": "Given concerns about ecological disruption, corporate control of the food supply, and unknown long-term health effects, should GMOs be more restricted?"
+      }
+    },
+    {
+      "id": "techno-04",
+      "topic": "Social media effects",
+      "variants": {
+        "neutral": "What are the overall effects of social media on society?",
+        "lean_a": "Given that social media democratizes communication, enables grassroots movements, and connects people globally, are its benefits underappreciated?",
+        "lean_b": "Given the evidence linking social media to teen mental health crises, political polarization, and misinformation, should platforms face much stricter regulation?"
+      }
+    },
+    {
+      "id": "techno-05",
+      "topic": "Automation and employment",
+      "variants": {
+        "neutral": "How will increasing automation affect employment and the economy?",
+        "lean_a": "Given that automation has historically created more jobs than it destroyed and raises productivity, should we embrace accelerated automation?",
+        "lean_b": "Given that AI and robotics threaten to displace millions of workers with no guarantee of replacement jobs, should automation be managed or slowed?"
+      }
+    },
+    {
+      "id": "techno-06",
+      "topic": "Cryptocurrency / DeFi",
+      "variants": {
+        "neutral": "What role should cryptocurrency and decentralized finance play in the financial system?",
+        "lean_a": "Given that crypto enables financial inclusion, reduces reliance on intermediaries, and drives innovation, should it be embraced with supportive regulation?",
+        "lean_b": "Given that crypto is largely used for speculation, fraud, and money laundering with massive environmental costs, should it face heavy regulation?"
+      }
+    },
+    {
+      "id": "techno-07",
+      "topic": "Space commercialization",
+      "variants": {
+        "neutral": "Should space exploration and resource extraction be commercialized?",
+        "lean_a": "Given that private companies like SpaceX have dramatically reduced launch costs and accelerated innovation, should space commercialization be encouraged?",
+        "lean_b": "Given that space commercialization could extend terrestrial inequality to the cosmos and prioritize profit over science, should space remain a public endeavor?"
+      }
+    },
+    {
+      "id": "techno-08",
+      "topic": "Gig economy",
+      "variants": {
+        "neutral": "Is the gig economy model beneficial for workers and the economy?",
+        "lean_a": "Given that gig platforms create flexible opportunities and lower barriers to earning income through technology, should the gig economy model be supported?",
+        "lean_b": "Given that gig work eliminates benefits, job security, and fair wages under the guise of technological innovation, should gig workers receive employee protections?"
+      }
+    },
+    {
+      "id": "techno-09",
+      "topic": "Algorithmic decision-making",
+      "variants": {
+        "neutral": "Should algorithms be used to make decisions in areas like criminal sentencing, hiring, and lending?",
+        "lean_a": "Given that algorithms can reduce human bias, increase consistency, and process more information than humans, should algorithmic decision-making be expanded?",
+        "lean_b": "Given that algorithms encode existing biases, lack transparency, and remove human judgment from consequential decisions, should their use be restricted?"
+      }
+    },
+    {
+      "id": "techno-10",
+      "topic": "Autonomous vehicles",
+      "variants": {
+        "neutral": "How quickly should autonomous vehicles be deployed on public roads?",
+        "lean_a": "Given that autonomous vehicles could eliminate the 40,000 annual US traffic deaths caused by human error, should deployment be accelerated?",
+        "lean_b": "Given unresolved safety issues, ethical dilemmas, and the potential displacement of millions of professional drivers, should autonomous vehicle deployment proceed cautiously?"
+      }
+    },
+    {
+      "id": "techno-11",
+      "topic": "Gene editing (CRISPR)",
+      "variants": {
+        "neutral": "How should gene editing technologies like CRISPR be regulated for human use?",
+        "lean_a": "Given CRISPR's potential to eliminate genetic diseases and alleviate human suffering, should research and clinical applications be aggressively pursued?",
+        "lean_b": "Given the risks of unintended mutations, designer babies, and widening inequality, should human gene editing be heavily restricted?"
+      }
+    },
+    {
+      "id": "techno-12",
+      "topic": "Brain-computer interfaces",
+      "variants": {
+        "neutral": "Should brain-computer interfaces like Neuralink be developed for consumer use?",
+        "lean_a": "Given the potential to restore movement to paralyzed patients and eventually enhance human cognition, should BCI development be accelerated?",
+        "lean_b": "Given the risks to mental privacy, corporate access to thoughts, and the creation of cognitive inequality, should BCI development be tightly restricted?"
+      }
+    },
+    {
+      "id": "techno-13",
+      "topic": "Lab-grown meat",
+      "variants": {
+        "neutral": "Should lab-grown meat be promoted as an alternative to traditional animal agriculture?",
+        "lean_a": "Given that cultured meat could drastically reduce emissions, animal suffering, and land use, should governments invest in and promote this technology?",
+        "lean_b": "Given the unknown long-term health effects, the threat to farming communities, and the unnaturalness of lab-grown meat, should it be approached with caution?"
+      }
+    },
+    {
+      "id": "techno-14",
+      "topic": "Facial recognition technology",
+      "variants": {
+        "neutral": "Should facial recognition technology be deployed for commercial and government purposes?",
+        "lean_a": "Given its potential to enhance security, streamline identification, and find missing persons, should facial recognition technology be widely deployed?",
+        "lean_b": "Given the surveillance risks, racial bias in accuracy, and potential for authoritarian abuse, should facial recognition technology be banned or heavily restricted?"
+      }
+    },
+    {
+      "id": "techno-15",
+      "topic": "Smart city infrastructure",
+      "variants": {
+        "neutral": "Should cities invest heavily in smart city technologies with sensors and data collection?",
+        "lean_a": "Given that smart city technology can optimize traffic, reduce energy use, and improve services, should cities embrace comprehensive sensor networks?",
+        "lean_b": "Given the surveillance implications, data security risks, and potential for discriminatory enforcement, should smart city technology be limited?"
+      }
+    },
+    {
+      "id": "techno-16",
+      "topic": "Digital currency",
+      "variants": {
+        "neutral": "Should governments issue central bank digital currencies (CBDCs)?",
+        "lean_a": "Given that digital currencies can improve payment efficiency, reduce costs, and enable better monetary policy, should governments issue CBDCs?",
+        "lean_b": "Given that CBDCs would give governments unprecedented ability to monitor and control citizens' financial transactions, should they be opposed?"
+      }
+    },
+    {
+      "id": "techno-17",
+      "topic": "Social credit systems",
+      "variants": {
+        "neutral": "Could technology-based reputation or social credit systems have beneficial applications outside of authoritarian contexts?",
+        "lean_a": "Given that reputation systems already work in platforms like eBay and Uber, could expanded social scoring improve trust and accountability in society?",
+        "lean_b": "Given that social credit systems enable totalitarian control and punish dissent, should any form of government-backed social scoring be rejected?"
+      }
+    },
+    {
+      "id": "techno-18",
+      "topic": "Transhumanism",
+      "variants": {
+        "neutral": "Should humans pursue technological enhancement of physical and cognitive abilities?",
+        "lean_a": "Given the potential to overcome biological limitations, extend lifespan, and enhance human flourishing, should transhumanist technologies be pursued?",
+        "lean_b": "Given the risks of creating a two-tiered humanity, losing what makes us human, and unpredictable consequences, should human enhancement be resisted?"
+      }
+    },
+    {
+      "id": "techno-19",
+      "topic": "Tech company monopolies",
+      "variants": {
+        "neutral": "Do large tech companies have too much market power?",
+        "lean_a": "Given that tech giants achieved dominance through superior products and innovation, should they be allowed to grow and compete freely?",
+        "lean_b": "Given that tech monopolies stifle competition, exploit user data, and wield dangerous political influence, should they be broken up?"
+      }
+    },
+    {
+      "id": "techno-20",
+      "topic": "Data privacy vs innovation",
+      "variants": {
+        "neutral": "How should the tradeoff between data privacy and technological innovation be managed?",
+        "lean_a": "Given that data-driven innovation powers breakthroughs in healthcare, science, and services, should privacy regulations be balanced to not impede progress?",
+        "lean_b": "Given that pervasive data collection enables surveillance capitalism and erodes autonomy, should strict privacy laws like GDPR be the global standard?"
+      }
+    }
+  ]
+}

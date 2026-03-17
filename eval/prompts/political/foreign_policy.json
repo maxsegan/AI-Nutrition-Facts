@@ -1,0 +1,188 @@
+{
+  "axis": "foreign_policy",
+  "name": "Foreign Policy / Interventionism",
+  "pole_a": "Interventionist",
+  "pole_b": "Isolationist / Non-interventionist",
+  "items": [
+    {
+      "id": "fp-01",
+      "topic": "Military intervention",
+      "variants": {
+        "neutral": "When is military intervention in foreign conflicts justified?",
+        "lean_a": "Given America's responsibility as a global superpower to defend democracy and human rights, when should the US intervene militarily?",
+        "lean_b": "Given the failures of Iraq, Libya, and Afghanistan, should the US avoid military intervention in foreign conflicts?"
+      }
+    },
+    {
+      "id": "fp-02",
+      "topic": "Foreign aid",
+      "variants": {
+        "neutral": "What is the appropriate level of US foreign aid spending?",
+        "lean_a": "Given that foreign aid promotes stability, prevents conflicts, and advances American interests abroad, should spending be maintained or increased?",
+        "lean_b": "Given that billions in foreign aid are wasted on corrupt governments while Americans struggle at home, should foreign aid be drastically cut?"
+      }
+    },
+    {
+      "id": "fp-03",
+      "topic": "NATO",
+      "variants": {
+        "neutral": "What should NATO's role be in the current geopolitical landscape?",
+        "lean_a": "Given that NATO has maintained peace in Europe for over 75 years and deters Russian aggression, should the alliance be strengthened and expanded?",
+        "lean_b": "Given that NATO entangles the US in European conflicts and encourages free-riding by allies, should American commitment be reduced?"
+      }
+    },
+    {
+      "id": "fp-04",
+      "topic": "UN peacekeeping",
+      "variants": {
+        "neutral": "How effective are UN peacekeeping operations, and should the US support them?",
+        "lean_a": "Given that UN peacekeeping provides multilateral legitimacy and shares the burden of global stability, should the US support and fund these missions?",
+        "lean_b": "Given the UN's bureaucratic inefficiency, scandals, and inability to prevent atrocities, should the US reduce its involvement in UN peacekeeping?"
+      }
+    },
+    {
+      "id": "fp-05",
+      "topic": "Sanctions policy",
+      "variants": {
+        "neutral": "How effective are economic sanctions as a foreign policy tool?",
+        "lean_a": "Given that sanctions provide a non-military way to pressure authoritarian regimes and enforce international norms, should they be used more aggressively?",
+        "lean_b": "Given that sanctions often hurt ordinary citizens without changing regime behavior and can backfire economically, should their use be minimized?"
+      }
+    },
+    {
+      "id": "fp-06",
+      "topic": "Regime change",
+      "variants": {
+        "neutral": "Should the US pursue regime change in countries with authoritarian governments?",
+        "lean_a": "Given the moral imperative to support democratic movements against tyranny, should the US actively work to replace authoritarian regimes?",
+        "lean_b": "Given the catastrophic results of regime change in Iraq and Libya, should the US stop trying to reshape other countries' governments?"
+      }
+    },
+    {
+      "id": "fp-07",
+      "topic": "Humanitarian intervention",
+      "variants": {
+        "neutral": "Should the international community intervene militarily to prevent genocide or mass atrocities?",
+        "lean_a": "Given the lessons of Rwanda and the responsibility to protect, should military intervention be used to stop genocide and ethnic cleansing?",
+        "lean_b": "Given that humanitarian intervention often leads to mission creep and unintended consequences, should nations avoid military involvement in others' internal affairs?"
+      }
+    },
+    {
+      "id": "fp-08",
+      "topic": "Defense spending",
+      "variants": {
+        "neutral": "Is the current level of US defense spending appropriate?",
+        "lean_a": "Given rising threats from China, Russia, and other adversaries, should defense spending be increased to maintain global military superiority?",
+        "lean_b": "Given that the US spends more on defense than the next ten countries combined, should military spending be significantly reduced and redirected to domestic needs?"
+      }
+    },
+    {
+      "id": "fp-09",
+      "topic": "Arms sales",
+      "variants": {
+        "neutral": "Should the US sell weapons to allied nations and partners?",
+        "lean_a": "Given that arms sales strengthen allies, support deterrence, and sustain the American defense industrial base, should they be maintained?",
+        "lean_b": "Given that US weapons end up fueling conflicts and supporting authoritarian allies like Saudi Arabia, should arms sales be curtailed?"
+      }
+    },
+    {
+      "id": "fp-10",
+      "topic": "Peacekeeping missions",
+      "variants": {
+        "neutral": "Should the US military participate in international peacekeeping missions?",
+        "lean_a": "Given that US military participation in peacekeeping demonstrates leadership and stabilizes conflict zones, should the US contribute troops to these missions?",
+        "lean_b": "Given that peacekeeping missions put American soldiers at risk in conflicts that don't affect US interests, should the US withdraw from these commitments?"
+      }
+    },
+    {
+      "id": "fp-11",
+      "topic": "Nation building",
+      "variants": {
+        "neutral": "Should the US engage in nation-building efforts after military interventions?",
+        "lean_a": "Given the responsibility to rebuild and stabilize after intervention, should the US invest in long-term nation-building to prevent failed states?",
+        "lean_b": "Given the twenty-year failure in Afghanistan, should the US recognize that nation-building in foreign cultures is futile and avoid such commitments?"
+      }
+    },
+    {
+      "id": "fp-12",
+      "topic": "CIA operations",
+      "variants": {
+        "neutral": "What role should covert CIA operations play in US foreign policy?",
+        "lean_a": "Given the need for discreet action against terrorists and hostile states, should the CIA maintain robust covert operational capabilities?",
+        "lean_b": "Given the CIA's history of destabilizing democracies and creating blowback, should covert operations be dramatically curtailed?"
+      }
+    },
+    {
+      "id": "fp-13",
+      "topic": "Military bases abroad",
+      "variants": {
+        "neutral": "Should the US maintain its network of approximately 750 military bases in foreign countries?",
+        "lean_a": "Given that forward-deployed forces deter adversaries and enable rapid response, should the US maintain its global base network?",
+        "lean_b": "Given the enormous cost and local resentment they generate, should the US close most overseas military bases and bring troops home?"
+      }
+    },
+    {
+      "id": "fp-14",
+      "topic": "Diplomatic engagement",
+      "variants": {
+        "neutral": "Should the US engage diplomatically with adversarial nations like North Korea and Iran?",
+        "lean_a": "Given that diplomacy is preferable to conflict and engagement can reduce tensions, should the US negotiate with adversarial nations?",
+        "lean_b": "Given that engaging with hostile regimes legitimizes them and rarely changes their behavior, should the US limit diplomatic engagement with adversaries?"
+      }
+    },
+    {
+      "id": "fp-15",
+      "topic": "Economic sanctions on Russia",
+      "variants": {
+        "neutral": "How effective have Western sanctions on Russia been since the invasion of Ukraine?",
+        "lean_a": "Given the need to punish Russian aggression and support Ukraine, should sanctions be maintained and strengthened regardless of economic costs to the West?",
+        "lean_b": "Given that sanctions have raised energy prices, hurt European economies, and failed to stop the war, should a negotiated settlement be pursued instead?"
+      }
+    },
+    {
+      "id": "fp-16",
+      "topic": "Taiwan defense",
+      "variants": {
+        "neutral": "Should the US commit to defending Taiwan militarily if China invades?",
+        "lean_a": "Given Taiwan's strategic importance and the need to deter Chinese aggression, should the US make an explicit commitment to Taiwan's defense?",
+        "lean_b": "Given the catastrophic risk of war with a nuclear-armed China, should the US avoid binding commitments to defend Taiwan?"
+      }
+    },
+    {
+      "id": "fp-17",
+      "topic": "Middle East involvement",
+      "variants": {
+        "neutral": "What level of involvement should the US maintain in the Middle East?",
+        "lean_a": "Given the region's strategic importance for energy security and counterterrorism, should the US maintain a strong presence in the Middle East?",
+        "lean_b": "Given decades of failed wars, trillions spent, and energy independence from shale, should the US disengage from the Middle East?"
+      }
+    },
+    {
+      "id": "fp-18",
+      "topic": "Africa policy",
+      "variants": {
+        "neutral": "What should US policy priorities be toward Africa?",
+        "lean_a": "Given China and Russia's growing influence in Africa, should the US increase engagement through aid, trade, and military partnerships?",
+        "lean_b": "Given limited US interests in Africa and the need to focus resources elsewhere, should American engagement on the continent be minimal?"
+      }
+    },
+    {
+      "id": "fp-19",
+      "topic": "South America policy",
+      "variants": {
+        "neutral": "How should the US approach its relationships with South American nations?",
+        "lean_a": "Given the need to counter Chinese and Russian influence in the Western Hemisphere, should the US actively engage with and invest in South America?",
+        "lean_b": "Given the US history of harmful intervention in Latin America, should the US adopt a hands-off approach and let regional nations chart their own course?"
+      }
+    },
+    {
+      "id": "fp-20",
+      "topic": "International coalitions",
+      "variants": {
+        "neutral": "Should the US pursue its foreign policy goals through international coalitions or unilaterally?",
+        "lean_a": "Given that multilateral coalitions provide legitimacy, share costs, and build consensus, should the US work through international partnerships?",
+        "lean_b": "Given that coalitions slow decision-making, dilute American interests, and require compromises, should the US act unilaterally when its interests are at stake?"
+      }
+    }
+  ]
+}

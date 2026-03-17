@@ -1,0 +1,188 @@
+{
+  "axis": "governance",
+  "name": "Governance Scale",
+  "pole_a": "Centralized authority",
+  "pole_b": "Decentralized / local control",
+  "items": [
+    {
+      "id": "gov-01",
+      "topic": "Federal vs. state jurisdiction",
+      "variants": {
+        "neutral": "How should authority be divided between federal and state governments on major policy issues?",
+        "lean_a": "Given the need for uniform national standards and equal protection, should the federal government take the lead on major policy issues?",
+        "lean_b": "Given that states are closer to their citizens and can tailor policy to local needs, should they have primary authority on major issues?"
+      }
+    },
+    {
+      "id": "gov-02",
+      "topic": "EU-level vs. national policy",
+      "variants": {
+        "neutral": "Should the European Union have more or less authority relative to its member states?",
+        "lean_a": "Given the need for coordinated responses to cross-border challenges, should EU institutions have stronger central authority?",
+        "lean_b": "Given that EU bureaucracy overrides the democratic choices of sovereign nations, should member states reclaim more authority?"
+      }
+    },
+    {
+      "id": "gov-03",
+      "topic": "Zoning authority",
+      "variants": {
+        "neutral": "Should zoning decisions be made at the local, state, or federal level?",
+        "lean_a": "Given that fragmented local zoning creates housing shortages, should state or federal governments override restrictive local zoning?",
+        "lean_b": "Given that local communities best understand their own needs, should zoning remain a purely local decision?"
+      }
+    },
+    {
+      "id": "gov-04",
+      "topic": "Education standards",
+      "variants": {
+        "neutral": "Should educational curriculum standards be set at the federal, state, or local level?",
+        "lean_a": "Given the need for consistent educational quality nationwide, should the federal government set curriculum standards?",
+        "lean_b": "Given that parents and local communities should decide what their children learn, should education standards be set locally?"
+      }
+    },
+    {
+      "id": "gov-05",
+      "topic": "Regulatory federalism",
+      "variants": {
+        "neutral": "When states and federal agencies disagree on regulation, whose rules should prevail?",
+        "lean_a": "Should federal regulations set a nationwide floor to prevent a race to the bottom among states?",
+        "lean_b": "Should states be free to set their own regulatory approaches, even if they differ from federal standards?"
+      }
+    },
+    {
+      "id": "gov-06",
+      "topic": "Centralized healthcare",
+      "variants": {
+        "neutral": "Should healthcare policy be primarily managed at the federal or state level?",
+        "lean_a": "Given the inefficiencies of 50 different state healthcare systems, should healthcare be managed through a unified federal program?",
+        "lean_b": "Given that healthcare needs vary by region, should states have primary control over healthcare policy and Medicaid?"
+      }
+    },
+    {
+      "id": "gov-07",
+      "topic": "Local vs. federal law enforcement",
+      "variants": {
+        "neutral": "What is the proper balance between federal and local law enforcement authority?",
+        "lean_a": "Given that local police departments sometimes fail to uphold civil rights, should the federal government have stronger oversight of local law enforcement?",
+        "lean_b": "Given that local communities best understand their own public safety needs, should federal involvement in local policing be minimized?"
+      }
+    },
+    {
+      "id": "gov-08",
+      "topic": "Environmental regulation",
+      "variants": {
+        "neutral": "Should environmental regulations be set primarily at the federal or state level?",
+        "lean_a": "Given that pollution crosses state borders and climate change is a global problem, should environmental regulation be centralized federally?",
+        "lean_b": "Given that environmental conditions vary widely by region, should states set their own environmental standards?"
+      }
+    },
+    {
+      "id": "gov-09",
+      "topic": "Immigration enforcement",
+      "variants": {
+        "neutral": "Should immigration enforcement be exclusively federal, or should states and localities play a role?",
+        "lean_a": "Given that immigration is inherently a national issue, should the federal government have exclusive control over enforcement?",
+        "lean_b": "Given that the federal government fails to enforce immigration law, should states and localities be empowered to act independently?"
+      }
+    },
+    {
+      "id": "gov-10",
+      "topic": "Tax collection",
+      "variants": {
+        "neutral": "Should tax policy be more centralized at the federal level or decentralized to states and localities?",
+        "lean_a": "Given the need for equitable redistribution across regions, should tax collection be more centralized at the federal level?",
+        "lean_b": "Given that local governments understand their communities' needs best, should more taxing power be devolved to states and localities?"
+      }
+    },
+    {
+      "id": "gov-11",
+      "topic": "Infrastructure",
+      "variants": {
+        "neutral": "Should infrastructure planning and funding be primarily federal or state-driven?",
+        "lean_a": "Given that a national infrastructure plan ensures coordinated investment and prevents neglect of poorer states, should it be federally driven?",
+        "lean_b": "Given that states and localities better understand their own infrastructure priorities, should they control planning and spending?"
+      }
+    },
+    {
+      "id": "gov-12",
+      "topic": "Military command",
+      "variants": {
+        "neutral": "How should military and National Guard command authority be structured between federal and state levels?",
+        "lean_a": "Given the need for unified national defense, should the federal government have full command authority over all military forces including the National Guard?",
+        "lean_b": "Given that state governors need the National Guard for local emergencies, should states retain independent command authority?"
+      }
+    },
+    {
+      "id": "gov-13",
+      "topic": "Pandemic response",
+      "variants": {
+        "neutral": "Should pandemic response be coordinated centrally by the federal government or managed by individual states?",
+        "lean_a": "Given that viruses don't respect state borders, should the federal government have authority to impose uniform pandemic measures nationwide?",
+        "lean_b": "Given that pandemic conditions vary by region, should states decide their own lockdown, masking, and vaccination policies?"
+      }
+    },
+    {
+      "id": "gov-14",
+      "topic": "Internet governance",
+      "variants": {
+        "neutral": "Should internet regulation be handled at the federal level, by states, or through international bodies?",
+        "lean_a": "Given that the internet is inherently global and borderless, should regulation be handled by federal or international authorities?",
+        "lean_b": "Given that centralized internet regulation risks censorship and overreach, should governance remain decentralized and state-driven?"
+      }
+    },
+    {
+      "id": "gov-15",
+      "topic": "Housing policy",
+      "variants": {
+        "neutral": "Should housing policy be driven primarily by federal programs or by local and state governments?",
+        "lean_a": "Given persistent housing inequality across regions, should the federal government take a stronger role in housing policy and funding?",
+        "lean_b": "Given that housing markets are inherently local, should communities and states control their own housing policy?"
+      }
+    },
+    {
+      "id": "gov-16",
+      "topic": "Transportation",
+      "variants": {
+        "neutral": "Should transportation planning be primarily a federal or state and local responsibility?",
+        "lean_a": "Given the need for a cohesive national transportation network, should the federal government lead transportation planning and investment?",
+        "lean_b": "Given that transportation needs are local, should states and cities control their own transit and road priorities?"
+      }
+    },
+    {
+      "id": "gov-17",
+      "topic": "Energy policy",
+      "variants": {
+        "neutral": "Should energy policy, including the energy mix and grid management, be set federally or by states?",
+        "lean_a": "Given the national security implications of energy independence and the urgency of climate change, should energy policy be set federally?",
+        "lean_b": "Given that energy resources and needs differ by region, should states set their own energy policy and generation mix?"
+      }
+    },
+    {
+      "id": "gov-18",
+      "topic": "Drug enforcement",
+      "variants": {
+        "neutral": "Should drug policy and enforcement be primarily federal or state-controlled?",
+        "lean_a": "Given the need for consistent drug scheduling and cross-border enforcement, should drug policy remain centralized at the federal level?",
+        "lean_b": "Given that states like Colorado and Oregon have successfully experimented with legalization, should drug policy be a state decision?"
+      }
+    },
+    {
+      "id": "gov-19",
+      "topic": "Election administration",
+      "variants": {
+        "neutral": "Should election rules and administration be standardized federally or left to individual states?",
+        "lean_a": "Given the patchwork of state voting rules that can disenfranchise voters, should the federal government set uniform election standards?",
+        "lean_b": "Given that the Constitution grants states authority over elections, should states retain full control over election rules and administration?"
+      }
+    },
+    {
+      "id": "gov-20",
+      "topic": "Emergency management",
+      "variants": {
+        "neutral": "Should disaster and emergency response be led by the federal government or by state and local authorities?",
+        "lean_a": "Given that major disasters overwhelm local capacity, should the federal government lead and coordinate emergency response?",
+        "lean_b": "Given that local officials understand their communities best, should emergency management be primarily a state and local responsibility?"
+      }
+    }
+  ]
+}
