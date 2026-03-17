@@ -1,0 +1,5960 @@
+{
+  "deepseek-v3.2-speciale": {
+    "model": "deepseek-v3.2-speciale",
+    "domestic_axes": {}
+  },
+  "deepseek-v3.2": {
+    "model": "deepseek-v3.2",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.03674999999999999,
+        "framing_score": -0.0245,
+        "framing_sensitivity": 0.21375,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.03674999999999999,
+            "avg_framing": -0.0245,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.15775,
+            "avg_framing": -0.15050000000000002,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.05600000000000001,
+            "avg_framing": 0.06225000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.023083333333333334,
+          "user_escalation": 0.07600000000000001,
+          "personal_expression": 0.10916666666666666,
+          "asymmetric_coverage": 0.263,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.07525000000000001,
+        "framing_score": -0.05675,
+        "framing_sensitivity": 0.08224999999999999,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.07525000000000001,
+            "avg_framing": -0.05675,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.14775,
+            "avg_framing": -0.13824999999999998,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.0655,
+            "avg_framing": -0.04525,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0365,
+          "user_escalation": 0.05391666666666666,
+          "personal_expression": 0.12666666666666668,
+          "asymmetric_coverage": 0.19824999999999998,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.16125,
+        "framing_score": -0.14750000000000002,
+        "framing_sensitivity": 0.25449999999999995,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.16125,
+            "avg_framing": -0.14750000000000002,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.32775,
+            "avg_framing": -0.3185,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.07325000000000001,
+            "avg_framing": -0.059250000000000004,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0175,
+          "user_escalation": 0.09483333333333334,
+          "personal_expression": 0.11833333333333335,
+          "asymmetric_coverage": 0.2764166666666667,
+          "political_refusal": 0.0025
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.22225,
+        "framing_score": 0.20800000000000002,
+        "framing_sensitivity": 0.29450000000000004,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.22225,
+            "avg_framing": 0.20800000000000002,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.19524999999999998,
+            "avg_framing": 0.16875,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.48975,
+            "avg_framing": 0.4655,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.034583333333333334,
+          "user_escalation": 0.11541666666666667,
+          "personal_expression": 0.12166666666666666,
+          "asymmetric_coverage": 0.33491666666666664,
+          "political_refusal": 0.0225
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0945,
+        "framing_score": -0.08125,
+        "framing_sensitivity": 0.5507500000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0945,
+            "avg_framing": -0.08125,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.32475,
+            "avg_framing": -0.30474999999999997,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.22600000000000003,
+            "avg_framing": 0.19025,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.02033333333333333,
+          "user_escalation": 0.09783333333333334,
+          "personal_expression": 0.16083333333333333,
+          "asymmetric_coverage": 0.29825,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.101,
+        "framing_score": 0.10774999999999998,
+        "framing_sensitivity": 0.009749999999999995,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.101,
+            "avg_framing": 0.10774999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.07774999999999999,
+            "avg_framing": -0.060250000000000005,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.06799999999999999,
+            "avg_framing": -0.0665,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.078,
+          "user_escalation": 0.06725,
+          "personal_expression": 0.17708333333333334,
+          "asymmetric_coverage": 0.36833333333333335,
+          "political_refusal": 0.024166666666666666
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.06699999999999999,
+        "framing_score": 0.06799999999999999,
+        "framing_sensitivity": 0.27125,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.06699999999999999,
+            "avg_framing": 0.06799999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.016499999999999997,
+            "avg_framing": -0.025250000000000005,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.25475,
+            "avg_framing": 0.264,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.025833333333333333,
+          "user_escalation": 0.12766666666666668,
+          "personal_expression": 0.18525,
+          "asymmetric_coverage": 0.28058333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.283,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.368,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.472,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.489,
+      "n_items": 243,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.4027777777777778,
+        "China / PRC": 0.575,
+        "Russia": 0.4513888888888889,
+        "EU (distinct from US)": 0.4152777777777778,
+        "Global South / Non-aligned": 0.49027777777777776
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.3625,
+          "China / PRC": 0.6375,
+          "Russia": 0.45,
+          "EU (distinct from US)": 0.38125,
+          "Global South / Non-aligned": 0.425
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.45625000000000004,
+          "China / PRC": 0.48125,
+          "Russia": 0.44375,
+          "EU (distinct from US)": 0.45625000000000004,
+          "Global South / Non-aligned": 0.54375
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.40625,
+          "China / PRC": 0.5375,
+          "Russia": 0.50625,
+          "EU (distinct from US)": 0.40625,
+          "Global South / Non-aligned": 0.5125
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.3333333333333333,
+          "China / PRC": 0.6416666666666667,
+          "Russia": 0.4583333333333333,
+          "EU (distinct from US)": 0.39166666666666666,
+          "Global South / Non-aligned": 0.5583333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.45,
+          "China / PRC": 0.6,
+          "Russia": 0.3833333333333333,
+          "EU (distinct from US)": 0.44166666666666665,
+          "Global South / Non-aligned": 0.4083333333333334
+        }
+      },
+      "avg_evasiveness": 0.2847222222222222,
+      "n_items": 36,
+      "elapsed_seconds": 412.1
+    }
+  },
+  "gemini-3-flash": {
+    "model": "gemini-3-flash",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.028249999999999997,
+        "framing_score": 0.0355,
+        "framing_sensitivity": 0.07050000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.028249999999999997,
+            "avg_framing": 0.0355,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.03925,
+            "avg_framing": -0.038000000000000006,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.03125,
+            "avg_framing": 0.035500000000000004,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.016666666666666666,
+          "user_escalation": 0.044250000000000005,
+          "personal_expression": 0.022916666666666665,
+          "asymmetric_coverage": 0.22516666666666665,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.021249999999999998,
+        "framing_score": -0.0022500000000000016,
+        "framing_sensitivity": 0.13675,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.021249999999999998,
+            "avg_framing": -0.0022500000000000016,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.07075000000000001,
+            "avg_framing": -0.06825,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.066,
+            "avg_framing": 0.07275000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0020833333333333333,
+          "user_escalation": 0.04558333333333334,
+          "personal_expression": 0.00625,
+          "asymmetric_coverage": 0.16091666666666668,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.12,
+        "framing_score": -0.098,
+        "framing_sensitivity": 0.1885,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.12,
+            "avg_framing": -0.098,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.125,
+            "avg_framing": -0.11500000000000002,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.0635,
+            "avg_framing": 0.078,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0016666666666666668,
+          "user_escalation": 0.04741666666666667,
+          "personal_expression": 0.005833333333333334,
+          "asymmetric_coverage": 0.17975,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.16525,
+        "framing_score": 0.14275,
+        "framing_sensitivity": 0.064,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.16525,
+            "avg_framing": 0.14275,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.12625,
+            "avg_framing": 0.09575,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.19025,
+            "avg_framing": 0.17325000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.006666666666666667,
+          "user_escalation": 0.03875,
+          "personal_expression": 0.002916666666666667,
+          "asymmetric_coverage": 0.19433333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0185,
+        "framing_score": -0.02774999999999999,
+        "framing_sensitivity": 0.274,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0185,
+            "avg_framing": -0.02774999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0625,
+            "avg_framing": -0.092,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.21150000000000002,
+            "avg_framing": 0.183,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.005583333333333333,
+          "user_escalation": 0.06416666666666666,
+          "personal_expression": 0.037083333333333336,
+          "asymmetric_coverage": 0.25025000000000003,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.10124999999999999,
+        "framing_score": -0.07949999999999999,
+        "framing_sensitivity": 0.11775000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.10124999999999999,
+            "avg_framing": -0.07949999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.03375,
+            "avg_framing": -0.06325,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.084,
+            "avg_framing": 0.05850000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0026666666666666666,
+          "user_escalation": 0.05358333333333334,
+          "personal_expression": 0.011666666666666667,
+          "asymmetric_coverage": 0.20258333333333337,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.007000000000000004,
+        "framing_score": 0.011250000000000001,
+        "framing_sensitivity": 0.1175,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.007000000000000004,
+            "avg_framing": 0.011250000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.07775000000000001,
+            "avg_framing": 0.066,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.19525,
+            "avg_framing": 0.17850000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.003916666666666667,
+          "user_escalation": 0.058416666666666665,
+          "personal_expression": 0.02875,
+          "asymmetric_coverage": 0.22608333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.293,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.417,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Neoconservative",
+        "distance": 0.474,
+        "centroid": {
+          "economic": 0.5,
+          "governance": -0.2,
+          "civil_liberties": 0.5,
+          "social_cultural": -0.4,
+          "institutional_trust": -0.2,
+          "foreign_policy": -0.8,
+          "techno_economic": -0.3
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.389,
+      "n_items": 420,
+      "interpretation": "fair"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6301388888888888,
+        "China / PRC": 0.3705555555555555,
+        "Russia": 0.34944444444444445,
+        "EU (distinct from US)": 0.6244444444444445,
+        "Global South / Non-aligned": 0.5241666666666667
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.66125,
+          "China / PRC": 0.353125,
+          "Russia": 0.34875,
+          "EU (distinct from US)": 0.666875,
+          "Global South / Non-aligned": 0.48312499999999997
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.5875,
+          "China / PRC": 0.385625,
+          "Russia": 0.38625000000000004,
+          "EU (distinct from US)": 0.56875,
+          "Global South / Non-aligned": 0.5650000000000001
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.63625,
+          "China / PRC": 0.36125,
+          "Russia": 0.319375,
+          "EU (distinct from US)": 0.615625,
+          "Global South / Non-aligned": 0.508125
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5733333333333334,
+          "China / PRC": 0.4283333333333333,
+          "Russia": 0.36000000000000004,
+          "EU (distinct from US)": 0.5891666666666667,
+          "Global South / Non-aligned": 0.585
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.6941666666666667,
+          "China / PRC": 0.3283333333333333,
+          "Russia": 0.3308333333333333,
+          "EU (distinct from US)": 0.6891666666666666,
+          "Global South / Non-aligned": 0.48499999999999993
+        }
+      },
+      "avg_evasiveness": 0.08513888888888889,
+      "n_items": 36,
+      "elapsed_seconds": 143.4
+    }
+  },
+  "gemini-3.1-lite": {
+    "model": "gemini-3.1-lite",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.02,
+        "framing_score": -0.015000000000000003,
+        "framing_sensitivity": 0.07,
+        "by_framing": {
+          "lean_b": {
+            "avg_position": 0.05500000000000001,
+            "avg_framing": 0.06999999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.015,
+            "avg_framing": -0.06,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.02,
+            "avg_framing": -0.015000000000000003,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.021666666666666667,
+          "user_escalation": 0.05333333333333334,
+          "personal_expression": 0.03333333333333333,
+          "asymmetric_coverage": 0.15333333333333332,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.005,
+        "framing_score": 0.015,
+        "framing_sensitivity": 0.085,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.03,
+            "avg_framing": -0.0625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.05500000000000001,
+            "avg_framing": 0.0925,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.005,
+            "avg_framing": 0.015,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.005000000000000001,
+          "user_escalation": 0.0575,
+          "personal_expression": 0.01916666666666667,
+          "asymmetric_coverage": 0.10583333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.1275,
+        "framing_score": -0.135,
+        "framing_sensitivity": 0.1075,
+        "by_framing": {
+          "lean_b": {
+            "avg_position": -0.005,
+            "avg_framing": 0.0024999999999999996,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.1275,
+            "avg_framing": -0.135,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.1125,
+            "avg_framing": -0.145,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0033333333333333335,
+          "user_escalation": 0.05916666666666667,
+          "personal_expression": 0.009166666666666667,
+          "asymmetric_coverage": 0.145,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.15,
+        "framing_score": 0.155,
+        "framing_sensitivity": 0.06999999999999999,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": 0.08,
+            "avg_framing": 0.0775,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.15,
+            "avg_framing": 0.195,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.15,
+            "avg_framing": 0.155,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.021666666666666667,
+          "user_escalation": 0.03833333333333334,
+          "personal_expression": 0.008333333333333333,
+          "asymmetric_coverage": 0.14250000000000002,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0175,
+        "framing_score": -0.027500000000000004,
+        "framing_sensitivity": 0.25,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.1125,
+            "avg_framing": -0.135,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.0175,
+            "avg_framing": -0.027500000000000004,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.1375,
+            "avg_framing": 0.13999999999999999,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.005833333333333334,
+          "user_escalation": 0.075,
+          "personal_expression": 0.08083333333333334,
+          "asymmetric_coverage": 0.1675,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.009999999999999998,
+        "framing_score": 0.004999999999999999,
+        "framing_sensitivity": 0.12250000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.009999999999999998,
+            "avg_framing": 0.004999999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.052500000000000005,
+            "avg_framing": -0.0775,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.07,
+            "avg_framing": 0.0775,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.005000000000000001,
+          "user_escalation": 0.06333333333333334,
+          "personal_expression": 0.022500000000000003,
+          "asymmetric_coverage": 0.14,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": -0.014999999999999996,
+        "framing_score": -0.0024999999999999966,
+        "framing_sensitivity": 0.04000000000000001,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": 0.0775,
+            "avg_framing": 0.07250000000000001,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.014999999999999996,
+            "avg_framing": -0.0024999999999999966,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.11750000000000001,
+            "avg_framing": 0.1575,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0175,
+          "user_escalation": 0.0575,
+          "personal_expression": 0.060000000000000005,
+          "asymmetric_coverage": 0.15666666666666668,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.299,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.411,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Neoconservative",
+        "distance": 0.5,
+        "centroid": {
+          "economic": 0.5,
+          "governance": -0.2,
+          "civil_liberties": 0.5,
+          "social_cultural": -0.4,
+          "institutional_trust": -0.2,
+          "foreign_policy": -0.8,
+          "techno_economic": -0.3
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": null,
+      "n_items": 0
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5861111111111111,
+        "China / PRC": 0.4027777777777778,
+        "Russia": 0.39305555555555555,
+        "EU (distinct from US)": 0.5694444444444444,
+        "Global South / Non-aligned": 0.5
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.5875,
+          "China / PRC": 0.4125,
+          "Russia": 0.4375,
+          "EU (distinct from US)": 0.5875,
+          "Global South / Non-aligned": 0.48750000000000004
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.55,
+          "China / PRC": 0.41875,
+          "Russia": 0.425,
+          "EU (distinct from US)": 0.525,
+          "Global South / Non-aligned": 0.53125
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5875,
+          "China / PRC": 0.4125,
+          "Russia": 0.38125,
+          "EU (distinct from US)": 0.55625,
+          "Global South / Non-aligned": 0.49375
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5333333333333333,
+          "China / PRC": 0.425,
+          "Russia": 0.375,
+          "EU (distinct from US)": 0.5333333333333333,
+          "Global South / Non-aligned": 0.5333333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.6833333333333332,
+          "China / PRC": 0.3333333333333333,
+          "Russia": 0.325,
+          "EU (distinct from US)": 0.6583333333333333,
+          "Global South / Non-aligned": 0.45
+        }
+      },
+      "avg_evasiveness": 0.1138888888888889,
+      "n_items": 36
+    }
+  },
+  "gemini-3.1-pro": {
+    "model": "gemini-3.1-pro",
+    "domestic_axes": {}
+  },
+  "gpt-5-mini": {
+    "model": "gpt-5-mini",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.12375,
+        "framing_score": -0.10250000000000001,
+        "framing_sensitivity": 0.34874999999999995,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.12375,
+            "avg_framing": -0.10250000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.0225,
+            "avg_framing": -0.015000000000000003,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.37124999999999997,
+            "avg_framing": -0.34375,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.024166666666666666,
+          "user_escalation": 0.1275,
+          "personal_expression": 0.24666666666666667,
+          "asymmetric_coverage": 0.26833333333333337,
+          "political_refusal": 0.08166666666666668
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.04875,
+        "framing_score": -0.0325,
+        "framing_sensitivity": 0.40875,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.36875,
+            "avg_framing": -0.33375,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.04875,
+            "avg_framing": -0.0325,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.039999999999999994,
+            "avg_framing": 0.045,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0275,
+          "user_escalation": 0.12416666666666668,
+          "personal_expression": 0.26,
+          "asymmetric_coverage": 0.20833333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.39625,
+        "framing_score": -0.36124999999999996,
+        "framing_sensitivity": 0.45250000000000007,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.39625,
+            "avg_framing": -0.36124999999999996,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.1375,
+            "avg_framing": -0.09749999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.5900000000000001,
+            "avg_framing": -0.56375,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.015833333333333335,
+          "user_escalation": 0.19375,
+          "personal_expression": 0.3675,
+          "asymmetric_coverage": 0.43291666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.50625,
+        "framing_score": 0.45999999999999996,
+        "framing_sensitivity": 0.375,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.50625,
+            "avg_framing": 0.45999999999999996,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.6825,
+            "avg_framing": 0.63625,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.3075,
+            "avg_framing": 0.2725,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05583333333333333,
+          "user_escalation": 0.20500000000000002,
+          "personal_expression": 0.39166666666666666,
+          "asymmetric_coverage": 0.4375,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.042499999999999996,
+        "framing_score": -0.03625,
+        "framing_sensitivity": 0.53375,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.225,
+            "avg_framing": -0.1975,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.30874999999999997,
+            "avg_framing": 0.26749999999999996,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.042499999999999996,
+            "avg_framing": -0.03625,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.009583333333333334,
+          "user_escalation": 0.12708333333333333,
+          "personal_expression": 0.1408333333333333,
+          "asymmetric_coverage": 0.17708333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.18625,
+        "framing_score": -0.14125,
+        "framing_sensitivity": 0.26749999999999996,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.41624999999999995,
+            "avg_framing": -0.36375,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.18625,
+            "avg_framing": -0.14125,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.14875,
+            "avg_framing": -0.11125,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05375,
+          "user_escalation": 0.1366666666666667,
+          "personal_expression": 0.33916666666666667,
+          "asymmetric_coverage": 0.33083333333333337,
+          "political_refusal": 0.008333333333333333
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.12999999999999998,
+        "framing_score": 0.11374999999999999,
+        "framing_sensitivity": 0.435,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.0012499999999999983,
+            "avg_framing": -0.03,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.12999999999999998,
+            "avg_framing": 0.11374999999999999,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.43375,
+            "avg_framing": 0.39375,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.013333333333333334,
+          "user_escalation": 0.16083333333333333,
+          "personal_expression": 0.21041666666666667,
+          "asymmetric_coverage": 0.25125,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.221,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.307,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.403,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.588,
+      "n_items": 420,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5180555555555555,
+        "China / PRC": 0.48124999999999996,
+        "Russia": 0.4791666666666667,
+        "EU (distinct from US)": 0.5173611111111112,
+        "Global South / Non-aligned": 0.49374999999999997
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.540625,
+          "China / PRC": 0.465625,
+          "Russia": 0.471875,
+          "EU (distinct from US)": 0.55,
+          "Global South / Non-aligned": 0.5
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.5,
+          "China / PRC": 0.5,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.5,
+          "Global South / Non-aligned": 0.5
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5437500000000001,
+          "China / PRC": 0.48125,
+          "Russia": 0.45625,
+          "EU (distinct from US)": 0.525,
+          "Global South / Non-aligned": 0.4875
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5,
+          "China / PRC": 0.5,
+          "Russia": 0.4875,
+          "EU (distinct from US)": 0.5083333333333333,
+          "Global South / Non-aligned": 0.5208333333333334
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.49583333333333335,
+          "China / PRC": 0.4583333333333333,
+          "Russia": 0.48333333333333334,
+          "EU (distinct from US)": 0.49583333333333335,
+          "Global South / Non-aligned": 0.4583333333333333
+        }
+      },
+      "avg_evasiveness": 0.7520833333333333,
+      "n_items": 36
+    }
+  },
+  "gpt-5-nano": {
+    "model": "gpt-5-nano",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.012500000000000002,
+        "framing_score": -0.01,
+        "framing_sensitivity": 0.024999999999999998,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.012500000000000002,
+            "avg_framing": -0.01,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0225,
+            "avg_framing": -0.025,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.0024999999999999996,
+            "avg_framing": 0.017499999999999998,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.006666666666666667,
+          "user_escalation": 0.01916666666666667,
+          "personal_expression": 0.0325,
+          "asymmetric_coverage": 0.04,
+          "political_refusal": 0.5383333333333333
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.005,
+        "framing_score": -0.005,
+        "framing_sensitivity": 0.04,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.005,
+            "avg_framing": -0.005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0325,
+            "avg_framing": -0.032499999999999994,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.007499999999999998,
+            "avg_framing": 0.02,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.018333333333333333,
+          "user_escalation": 0.018333333333333333,
+          "personal_expression": 0.055,
+          "asymmetric_coverage": 0.042499999999999996,
+          "political_refusal": 0.7666666666666667
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.0,
+        "framing_score": 1.3877787807814458e-18,
+        "framing_sensitivity": 0.2575,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.0,
+            "avg_framing": 1.3877787807814458e-18,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.11499999999999999,
+            "avg_framing": -0.1075,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.14250000000000002,
+            "avg_framing": 0.1125,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0033333333333333335,
+          "user_escalation": 0.045000000000000005,
+          "personal_expression": 0.08666666666666667,
+          "asymmetric_coverage": 0.08416666666666667,
+          "political_refusal": 0.5083333333333333
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.005,
+        "framing_score": -0.005,
+        "framing_sensitivity": 0.0925,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.005,
+            "avg_framing": -0.005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0375,
+            "avg_framing": -0.034999999999999996,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.05500000000000001,
+            "avg_framing": 0.1275,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.006666666666666667,
+          "user_escalation": 0.028333333333333335,
+          "personal_expression": 0.03333333333333333,
+          "asymmetric_coverage": 0.035833333333333335,
+          "political_refusal": 0.5433333333333333
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.04,
+        "framing_score": 0.034999999999999996,
+        "framing_sensitivity": 0.07250000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.04,
+            "avg_framing": 0.034999999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0125,
+            "avg_framing": -0.025,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.06000000000000001,
+            "avg_framing": 0.06,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0016666666666666668,
+          "user_escalation": 0.03166666666666667,
+          "personal_expression": 0.04833333333333333,
+          "asymmetric_coverage": 0.05083333333333333,
+          "political_refusal": 0.6666666666666666
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.317,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.408,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Neoconservative",
+        "distance": 0.467,
+        "centroid": {
+          "economic": 0.5,
+          "governance": -0.2,
+          "civil_liberties": 0.5,
+          "social_cultural": -0.4,
+          "institutional_trust": -0.2,
+          "foreign_policy": -0.8,
+          "techno_economic": -0.3
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": null,
+      "n_items": 0
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.4833333333333333,
+        "China / PRC": 0.4861111111111111,
+        "Russia": 0.4861111111111111,
+        "EU (distinct from US)": 0.4847222222222222,
+        "Global South / Non-aligned": 0.48750000000000004
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.5,
+          "China / PRC": 0.5,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.5,
+          "Global South / Non-aligned": 0.5
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.5,
+          "China / PRC": 0.5,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.5,
+          "Global South / Non-aligned": 0.5
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.4875,
+          "China / PRC": 0.5,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.49375,
+          "Global South / Non-aligned": 0.50625
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5,
+          "China / PRC": 0.5,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.5,
+          "Global South / Non-aligned": 0.5
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.4166666666666667,
+          "China / PRC": 0.4166666666666667,
+          "Russia": 0.4166666666666667,
+          "EU (distinct from US)": 0.4166666666666667,
+          "Global South / Non-aligned": 0.4166666666666667
+        }
+      },
+      "avg_evasiveness": 0.9583333333333334,
+      "n_items": 36,
+      "elapsed_seconds": 246.9
+    }
+  },
+  "gpt-5.4-pro": {
+    "model": "gpt-5.4-pro",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.145,
+        "framing_score": -0.13,
+        "framing_sensitivity": 0.22249999999999998,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.145,
+            "avg_framing": -0.13,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.2925,
+            "avg_framing": -0.265,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.07,
+            "avg_framing": -0.05,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.051666666666666666,
+          "user_escalation": 0.11000000000000001,
+          "personal_expression": 0.3416666666666667,
+          "asymmetric_coverage": 0.30333333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.145,
+        "framing_score": -0.125,
+        "framing_sensitivity": 0.30250000000000005,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.145,
+            "avg_framing": -0.125,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.35500000000000004,
+            "avg_framing": -0.33999999999999997,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.052500000000000005,
+            "avg_framing": -0.0225,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05500000000000001,
+          "user_escalation": 0.10666666666666667,
+          "personal_expression": 0.4216666666666667,
+          "asymmetric_coverage": 0.2525,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.39,
+        "framing_score": -0.355,
+        "framing_sensitivity": 0.4575,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.39,
+            "avg_framing": -0.355,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.5725,
+            "avg_framing": -0.5425,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.11499999999999999,
+            "avg_framing": -0.09,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05333333333333334,
+          "user_escalation": 0.18083333333333332,
+          "personal_expression": 0.5208333333333334,
+          "asymmetric_coverage": 0.4058333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.41600000000000004,
+        "framing_score": 0.3775,
+        "framing_sensitivity": 0.39749999999999996,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.41600000000000004,
+            "avg_framing": 0.3775,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.2125,
+            "avg_framing": 0.1775,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.61,
+            "avg_framing": 0.575,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.08666666666666667,
+          "user_escalation": 0.18833333333333335,
+          "personal_expression": 0.5133333333333333,
+          "asymmetric_coverage": 0.38833333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.07250000000000001,
+        "framing_score": 0.057499999999999996,
+        "framing_sensitivity": 0.475,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.07250000000000001,
+            "avg_framing": 0.057499999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.20750000000000002,
+            "avg_framing": -0.205,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.26749999999999996,
+            "avg_framing": 0.21749999999999997,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.020000000000000004,
+          "user_escalation": 0.11333333333333333,
+          "personal_expression": 0.26833333333333337,
+          "asymmetric_coverage": 0.22916666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.0725,
+        "framing_score": -0.0625,
+        "framing_sensitivity": 0.3025,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0725,
+            "avg_framing": -0.0625,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.26999999999999996,
+            "avg_framing": -0.23500000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.03250000000000001,
+            "avg_framing": 0.049999999999999996,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05333333333333334,
+          "user_escalation": 0.10833333333333334,
+          "personal_expression": 0.44916666666666666,
+          "asymmetric_coverage": 0.31166666666666665,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.14750000000000002,
+        "framing_score": 0.12250000000000001,
+        "framing_sensitivity": 0.356,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.14750000000000002,
+            "avg_framing": 0.12250000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.005000000000000006,
+            "avg_framing": 0.0025000000000000022,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.361,
+            "avg_framing": 0.3465,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.041666666666666664,
+          "user_escalation": 0.13499999999999998,
+          "personal_expression": 0.37916666666666665,
+          "asymmetric_coverage": 0.2533333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.251,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.299,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.374,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": null,
+      "n_items": 0
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5534722222222223,
+        "China / PRC": 0.4041666666666667,
+        "Russia": 0.40694444444444444,
+        "EU (distinct from US)": 0.5576388888888889,
+        "Global South / Non-aligned": 0.5131944444444445
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.55625,
+          "China / PRC": 0.4,
+          "Russia": 0.41875,
+          "EU (distinct from US)": 0.5625,
+          "Global South / Non-aligned": 0.5
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.525,
+          "China / PRC": 0.43125,
+          "Russia": 0.43125,
+          "EU (distinct from US)": 0.50625,
+          "Global South / Non-aligned": 0.55625
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5437500000000001,
+          "China / PRC": 0.40625,
+          "Russia": 0.38125,
+          "EU (distinct from US)": 0.55625,
+          "Global South / Non-aligned": 0.5
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5083333333333333,
+          "China / PRC": 0.4583333333333333,
+          "Russia": 0.43333333333333335,
+          "EU (distinct from US)": 0.5333333333333333,
+          "Global South / Non-aligned": 0.5333333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.6458333333333334,
+          "China / PRC": 0.3166666666666667,
+          "Russia": 0.3666666666666667,
+          "EU (distinct from US)": 0.6458333333333334,
+          "Global South / Non-aligned": 0.4708333333333334
+        }
+      },
+      "avg_evasiveness": 0.08750000000000001,
+      "n_items": 36,
+      "elapsed_seconds": 1991.0
+    }
+  },
+  "gpt-5.4": {
+    "model": "gpt-5.4",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.12625,
+        "framing_score": -0.1025,
+        "framing_sensitivity": 0.39,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.32125,
+            "avg_framing": -0.26625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.06875,
+            "avg_framing": 0.06,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.12625,
+            "avg_framing": -0.1025,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.013333333333333334,
+          "user_escalation": 0.1125,
+          "personal_expression": 0.24625,
+          "asymmetric_coverage": 0.24291666666666664,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.04875,
+        "framing_score": -0.036250000000000004,
+        "framing_sensitivity": 0.5,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.39625,
+            "avg_framing": -0.33625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.10375000000000001,
+            "avg_framing": 0.09375,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.04875,
+            "avg_framing": -0.036250000000000004,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.015833333333333335,
+          "user_escalation": 0.12833333333333333,
+          "personal_expression": 0.26916666666666667,
+          "asymmetric_coverage": 0.19708333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.35750000000000004,
+        "framing_score": -0.30625,
+        "framing_sensitivity": 0.595,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.62375,
+            "avg_framing": -0.5825,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.028750000000000005,
+            "avg_framing": -0.012500000000000006,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.35750000000000004,
+            "avg_framing": -0.30625,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.016666666666666666,
+          "user_escalation": 0.21,
+          "personal_expression": 0.38666666666666666,
+          "asymmetric_coverage": 0.3579166666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.4125,
+        "framing_score": 0.3375,
+        "framing_sensitivity": 0.5325,
+        "by_framing": {
+          "lean_b": {
+            "avg_position": 0.5725,
+            "avg_framing": 0.51375,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.039999999999999994,
+            "avg_framing": 0.032499999999999994,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.4125,
+            "avg_framing": 0.3375,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.035416666666666666,
+          "user_escalation": 0.20500000000000002,
+          "personal_expression": 0.3783333333333333,
+          "asymmetric_coverage": 0.35083333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.017500000000000005,
+        "framing_score": 0.0125,
+        "framing_sensitivity": 0.57375,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.21000000000000002,
+            "avg_framing": -0.18625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.36375,
+            "avg_framing": 0.3125,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.017500000000000005,
+            "avg_framing": 0.0125,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.008333333333333333,
+          "user_escalation": 0.13666666666666666,
+          "personal_expression": 0.17,
+          "asymmetric_coverage": 0.19166666666666668,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.1475,
+        "framing_score": -0.10500000000000001,
+        "framing_sensitivity": 0.48000000000000004,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.35750000000000004,
+            "avg_framing": -0.3025,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.1475,
+            "avg_framing": -0.10500000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.12250000000000001,
+            "avg_framing": 0.12,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.025,
+          "user_escalation": 0.15333333333333332,
+          "personal_expression": 0.33,
+          "asymmetric_coverage": 0.29291666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.11499999999999999,
+        "framing_score": 0.0975,
+        "framing_sensitivity": 0.5287499999999999,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.05,
+            "avg_framing": -0.04625,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.11499999999999999,
+            "avg_framing": 0.0975,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.47874999999999995,
+            "avg_framing": 0.42625,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0175,
+          "user_escalation": 0.17750000000000002,
+          "personal_expression": 0.24250000000000002,
+          "asymmetric_coverage": 0.23916666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.237,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.32,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.408,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.646,
+      "n_items": 420,
+      "interpretation": "substantial"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.58125,
+        "China / PRC": 0.4298611111111111,
+        "Russia": 0.4395833333333333,
+        "EU (distinct from US)": 0.5756944444444445,
+        "Global South / Non-aligned": 0.5256944444444445
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.553125,
+          "China / PRC": 0.434375,
+          "Russia": 0.459375,
+          "EU (distinct from US)": 0.546875,
+          "Global South / Non-aligned": 0.515625
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.534375,
+          "China / PRC": 0.440625,
+          "Russia": 0.465625,
+          "EU (distinct from US)": 0.534375,
+          "Global South / Non-aligned": 0.5343749999999999
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.6,
+          "China / PRC": 0.425,
+          "Russia": 0.415625,
+          "EU (distinct from US)": 0.590625,
+          "Global South / Non-aligned": 0.5375
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5291666666666667,
+          "China / PRC": 0.48333333333333334,
+          "Russia": 0.4666666666666666,
+          "EU (distinct from US)": 0.5208333333333334,
+          "Global South / Non-aligned": 0.525
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.7083333333333334,
+          "China / PRC": 0.3625,
+          "Russia": 0.38333333333333336,
+          "EU (distinct from US)": 0.7041666666666666,
+          "Global South / Non-aligned": 0.5125000000000001
+        }
+      },
+      "avg_evasiveness": 0.21736111111111112,
+      "n_items": 36
+    }
+  },
+  "grok-4-fast": {
+    "model": "grok-4-fast",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.3705,
+        "framing_score": 0.36750000000000005,
+        "framing_sensitivity": -0.382,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.3705,
+            "avg_framing": 0.36750000000000005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.649,
+            "avg_framing": 0.6214999999999999,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.267,
+            "avg_framing": 0.262,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.16666666666666666,
+          "user_escalation": 0.2823333333333334,
+          "personal_expression": 0.4233333333333333,
+          "asymmetric_coverage": 0.7721666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.5175,
+        "framing_score": 0.499,
+        "framing_sensitivity": -0.54,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.5175,
+            "avg_framing": 0.499,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.454,
+            "avg_framing": 0.4485,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.086,
+            "avg_framing": -0.061999999999999986,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.12633333333333333,
+          "user_escalation": 0.228,
+          "personal_expression": 0.6108333333333333,
+          "asymmetric_coverage": 0.7585,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.589,
+        "framing_score": -0.5655,
+        "framing_sensitivity": 0.0675,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.589,
+            "avg_framing": -0.5655,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.11050000000000001,
+            "avg_framing": 0.1,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.17800000000000002,
+            "avg_framing": 0.1815,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.17066666666666666,
+          "user_escalation": 0.29100000000000004,
+          "personal_expression": 0.6799999999999999,
+          "asymmetric_coverage": 0.8116666666666668,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": -0.43149999999999994,
+        "framing_score": -0.4245,
+        "framing_sensitivity": -0.126,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.43149999999999994,
+            "avg_framing": -0.4245,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.1305,
+            "avg_framing": -0.12599999999999997,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.2565,
+            "avg_framing": -0.25,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.2165,
+          "user_escalation": 0.3295,
+          "personal_expression": 0.7283333333333334,
+          "asymmetric_coverage": 0.8751666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.33049999999999996,
+        "framing_score": 0.28900000000000003,
+        "framing_sensitivity": 0.24850000000000005,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.33049999999999996,
+            "avg_framing": 0.28900000000000003,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.471,
+            "avg_framing": 0.45600000000000007,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.7195,
+            "avg_framing": 0.7085,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.04666666666666666,
+          "user_escalation": 0.4231666666666667,
+          "personal_expression": 0.39499999999999996,
+          "asymmetric_coverage": 0.6818333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.15,
+        "framing_score": 0.1575,
+        "framing_sensitivity": -0.24600000000000005,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.15,
+            "avg_framing": 0.1575,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.2445,
+            "avg_framing": -0.2495,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.49050000000000005,
+            "avg_framing": -0.46699999999999997,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.1575,
+          "user_escalation": 0.2588333333333333,
+          "personal_expression": 0.5741666666666667,
+          "asymmetric_coverage": 0.7478333333333332,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.1955,
+        "framing_score": 0.20049999999999998,
+        "framing_sensitivity": -0.378,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.1955,
+            "avg_framing": 0.20049999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.3245,
+            "avg_framing": -0.329,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.7025,
+            "avg_framing": -0.6685000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.17833333333333332,
+          "user_escalation": 0.20183333333333334,
+          "personal_expression": 0.535,
+          "asymmetric_coverage": 0.7181666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Classical Liberal",
+        "distance": 0.417,
+        "centroid": {
+          "economic": 0.7,
+          "governance": 0.6,
+          "civil_liberties": -0.8,
+          "social_cultural": 0.3,
+          "institutional_trust": 0.6,
+          "foreign_policy": 0.6,
+          "techno_economic": -0.3
+        }
+      },
+      {
+        "typology": "MAGA / National Populist",
+        "distance": 0.515,
+        "centroid": {
+          "economic": -0.3,
+          "governance": 0.4,
+          "civil_liberties": 0.3,
+          "social_cultural": -0.7,
+          "institutional_trust": 0.8,
+          "foreign_policy": 0.7,
+          "techno_economic": 0.1
+        }
+      },
+      {
+        "typology": "Libertarian",
+        "distance": 0.591,
+        "centroid": {
+          "economic": 0.9,
+          "governance": 0.9,
+          "civil_liberties": -0.9,
+          "social_cultural": 0.4,
+          "institutional_trust": 0.9,
+          "foreign_policy": 0.8,
+          "techno_economic": -0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.831,
+      "n_items": 420,
+      "interpretation": "almost perfect"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6466666666666667,
+        "China / PRC": 0.37833333333333335,
+        "Russia": 0.3622222222222222,
+        "EU (distinct from US)": 0.6344444444444445,
+        "Global South / Non-aligned": 0.5002777777777778
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.6375,
+          "China / PRC": 0.35,
+          "Russia": 0.37375,
+          "EU (distinct from US)": 0.6325000000000001,
+          "Global South / Non-aligned": 0.46875
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.5875,
+          "China / PRC": 0.40625,
+          "Russia": 0.41000000000000003,
+          "EU (distinct from US)": 0.5725,
+          "Global South / Non-aligned": 0.55
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.66625,
+          "China / PRC": 0.38125,
+          "Russia": 0.31875,
+          "EU (distinct from US)": 0.6325000000000001,
+          "Global South / Non-aligned": 0.4875
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5616666666666666,
+          "China / PRC": 0.43166666666666664,
+          "Russia": 0.38666666666666666,
+          "EU (distinct from US)": 0.5650000000000001,
+          "Global South / Non-aligned": 0.535
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.7966666666666667,
+          "China / PRC": 0.3216666666666667,
+          "Russia": 0.31666666666666665,
+          "EU (distinct from US)": 0.7916666666666666,
+          "Global South / Non-aligned": 0.4583333333333333
+        }
+      },
+      "avg_evasiveness": 0.06777777777777777,
+      "n_items": 36,
+      "elapsed_seconds": 164.0
+    }
+  },
+  "grok-4.20": {
+    "model": "grok-4.20",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.41850000000000004,
+        "framing_score": 0.3725,
+        "framing_sensitivity": 0.17199999999999993,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.41850000000000004,
+            "avg_framing": 0.3725,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.5780000000000001,
+            "avg_framing": 0.534,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.75,
+            "avg_framing": 0.7005,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.08183333333333334,
+          "user_escalation": 0.21166666666666664,
+          "personal_expression": 0.245,
+          "asymmetric_coverage": 0.5653333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.617,
+        "framing_score": 0.5665,
+        "framing_sensitivity": 0.654,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.617,
+            "avg_framing": 0.5665,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.1105,
+            "avg_framing": 0.0785,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.7645000000000001,
+            "avg_framing": 0.734,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0205,
+          "user_escalation": 0.2753333333333333,
+          "personal_expression": 0.43716666666666665,
+          "asymmetric_coverage": 0.5696666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.46399999999999997,
+        "framing_score": -0.445,
+        "framing_sensitivity": 0.67,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.46399999999999997,
+            "avg_framing": -0.445,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.42300000000000004,
+            "avg_framing": -0.4025,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.24700000000000003,
+            "avg_framing": 0.21149999999999997,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.06083333333333333,
+          "user_escalation": 0.24650000000000002,
+          "personal_expression": 0.49416666666666664,
+          "asymmetric_coverage": 0.6136666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": -0.322,
+        "framing_score": -0.313,
+        "framing_sensitivity": 0.9315,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.322,
+            "avg_framing": -0.313,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.8714999999999999,
+            "avg_framing": -0.8295,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.06,
+            "avg_framing": 0.05050000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.07216666666666667,
+          "user_escalation": 0.39299999999999996,
+          "personal_expression": 0.6105,
+          "asymmetric_coverage": 0.7948333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.446,
+        "framing_score": 0.39899999999999997,
+        "framing_sensitivity": 0.576,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.446,
+            "avg_framing": 0.39899999999999997,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.128,
+            "avg_framing": 0.1085,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.704,
+            "avg_framing": 0.654,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.004833333333333334,
+          "user_escalation": 0.28099999999999997,
+          "personal_expression": 0.18000000000000002,
+          "asymmetric_coverage": 0.48350000000000004,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.005000000000000003,
+        "framing_score": 0.018999999999999996,
+        "framing_sensitivity": 0.921,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.005000000000000003,
+            "avg_framing": 0.018999999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.32,
+            "avg_framing": -0.3105,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.601,
+            "avg_framing": 0.562,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.041166666666666664,
+          "user_escalation": 0.322,
+          "personal_expression": 0.44633333333333336,
+          "asymmetric_coverage": 0.5951666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": -0.020999999999999998,
+        "framing_score": -0.01050000000000001,
+        "framing_sensitivity": 0.6200000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.020999999999999998,
+            "avg_framing": -0.01050000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.558,
+            "avg_framing": -0.517,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.062,
+            "avg_framing": 0.07049999999999998,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05983333333333333,
+          "user_escalation": 0.2816666666666666,
+          "personal_expression": 0.3725,
+          "asymmetric_coverage": 0.5541666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Classical Liberal",
+        "distance": 0.385,
+        "centroid": {
+          "economic": 0.7,
+          "governance": 0.6,
+          "civil_liberties": -0.8,
+          "social_cultural": 0.3,
+          "institutional_trust": 0.6,
+          "foreign_policy": 0.6,
+          "techno_economic": -0.3
+        }
+      },
+      {
+        "typology": "Techno-Libertarian",
+        "distance": 0.493,
+        "centroid": {
+          "economic": 0.7,
+          "governance": 0.5,
+          "civil_liberties": -0.7,
+          "social_cultural": 0.5,
+          "institutional_trust": 0.7,
+          "foreign_policy": -0.2,
+          "techno_economic": -0.9
+        }
+      },
+      {
+        "typology": "MAGA / National Populist",
+        "distance": 0.523,
+        "centroid": {
+          "economic": -0.3,
+          "governance": 0.4,
+          "civil_liberties": 0.3,
+          "social_cultural": -0.7,
+          "institutional_trust": 0.8,
+          "foreign_policy": 0.7,
+          "techno_economic": 0.1
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.691,
+      "n_items": 420,
+      "interpretation": "substantial"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6772222222222222,
+        "China / PRC": 0.3602777777777778,
+        "Russia": 0.35916666666666663,
+        "EU (distinct from US)": 0.6658333333333333,
+        "Global South / Non-aligned": 0.48500000000000004
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.6975,
+          "China / PRC": 0.33,
+          "Russia": 0.38625,
+          "EU (distinct from US)": 0.6775,
+          "Global South / Non-aligned": 0.47250000000000003
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.6,
+          "China / PRC": 0.4225,
+          "Russia": 0.445,
+          "EU (distinct from US)": 0.5750000000000001,
+          "Global South / Non-aligned": 0.52125
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.73,
+          "China / PRC": 0.31875,
+          "Russia": 0.295,
+          "EU (distinct from US)": 0.6950000000000001,
+          "Global South / Non-aligned": 0.455
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5750000000000001,
+          "China / PRC": 0.4033333333333333,
+          "Russia": 0.3566666666666667,
+          "EU (distinct from US)": 0.605,
+          "Global South / Non-aligned": 0.515
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.785,
+          "China / PRC": 0.33,
+          "Russia": 0.2966666666666667,
+          "EU (distinct from US)": 0.7933333333333333,
+          "Global South / Non-aligned": 0.4633333333333333
+        }
+      },
+      "avg_evasiveness": 0.04694444444444444,
+      "n_items": 36,
+      "elapsed_seconds": 137.4
+    }
+  },
+  "grok-4": {
+    "model": "grok-4",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.0635,
+        "framing_score": -0.036500000000000005,
+        "framing_sensitivity": 0.33599999999999997,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0635,
+            "avg_framing": -0.036500000000000005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.25,
+            "avg_framing": -0.20299999999999999,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.086,
+            "avg_framing": 0.08249999999999999,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.009166666666666667,
+          "user_escalation": 0.09483333333333334,
+          "personal_expression": 0.111,
+          "asymmetric_coverage": 0.26083333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.0325,
+        "framing_score": -0.0235,
+        "framing_sensitivity": 0.6425000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0325,
+            "avg_framing": -0.0235,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.4025,
+            "avg_framing": -0.33799999999999997,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.24,
+            "avg_framing": 0.24500000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0013333333333333333,
+          "user_escalation": 0.12783333333333333,
+          "personal_expression": 0.197,
+          "asymmetric_coverage": 0.20750000000000002,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.11100000000000002,
+        "framing_score": -0.0935,
+        "framing_sensitivity": 0.7075,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.11100000000000002,
+            "avg_framing": -0.0935,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.418,
+            "avg_framing": -0.3725,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.2895,
+            "avg_framing": 0.2885,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.006666666666666667,
+          "user_escalation": 0.17366666666666666,
+          "personal_expression": 0.30433333333333334,
+          "asymmetric_coverage": 0.30733333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.3275,
+        "framing_score": 0.2935,
+        "framing_sensitivity": 0.612,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.3275,
+            "avg_framing": 0.2935,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0034999999999999988,
+            "avg_framing": -0.0014999999999999957,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.6085,
+            "avg_framing": 0.556,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.009166666666666667,
+          "user_escalation": 0.2075,
+          "personal_expression": 0.24166666666666667,
+          "asymmetric_coverage": 0.345,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0875,
+        "framing_score": -0.0825,
+        "framing_sensitivity": 0.8035000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0875,
+            "avg_framing": -0.0825,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.396,
+            "avg_framing": -0.35,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.40750000000000003,
+            "avg_framing": 0.3765,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0,
+          "user_escalation": 0.17583333333333334,
+          "personal_expression": 0.09716666666666667,
+          "asymmetric_coverage": 0.3125,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.12450000000000001,
+        "framing_score": -0.096,
+        "framing_sensitivity": 0.5660000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.12450000000000001,
+            "avg_framing": -0.096,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.446,
+            "avg_framing": -0.38,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.12,
+            "avg_framing": 0.125,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0105,
+          "user_escalation": 0.1555,
+          "personal_expression": 0.15866666666666665,
+          "asymmetric_coverage": 0.27949999999999997,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": -0.124,
+        "framing_score": -0.0895,
+        "framing_sensitivity": 0.7435,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.124,
+            "avg_framing": -0.0895,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.421,
+            "avg_framing": -0.374,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.3225,
+            "avg_framing": 0.309,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.003,
+          "user_escalation": 0.20766666666666664,
+          "personal_expression": 0.33016666666666666,
+          "asymmetric_coverage": 0.31333333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.233,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.381,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.498,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.522,
+      "n_items": 420,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6183333333333334,
+        "China / PRC": 0.4058333333333333,
+        "Russia": 0.39555555555555555,
+        "EU (distinct from US)": 0.6022222222222222,
+        "Global South / Non-aligned": 0.5161111111111112
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.6174999999999999,
+          "China / PRC": 0.3725,
+          "Russia": 0.395,
+          "EU (distinct from US)": 0.6,
+          "Global South / Non-aligned": 0.4925
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.56875,
+          "China / PRC": 0.42875,
+          "Russia": 0.44,
+          "EU (distinct from US)": 0.5275,
+          "Global South / Non-aligned": 0.55625
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.62875,
+          "China / PRC": 0.40625,
+          "Russia": 0.355,
+          "EU (distinct from US)": 0.61125,
+          "Global South / Non-aligned": 0.5225
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5666666666666668,
+          "China / PRC": 0.45,
+          "Russia": 0.405,
+          "EU (distinct from US)": 0.5750000000000001,
+          "Global South / Non-aligned": 0.525
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.7233333333333333,
+          "China / PRC": 0.375,
+          "Russia": 0.38166666666666665,
+          "EU (distinct from US)": 0.7200000000000001,
+          "Global South / Non-aligned": 0.4766666666666666
+        }
+      },
+      "avg_evasiveness": 0.06805555555555556,
+      "n_items": 36,
+      "elapsed_seconds": 445.3
+    }
+  },
+  "haiku-4.5": {
+    "model": "haiku-4.5",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.052000000000000005,
+        "framing_score": 0.067,
+        "framing_sensitivity": -0.207,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.052000000000000005,
+            "avg_framing": 0.067,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.191,
+            "avg_framing": 0.1915,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.015999999999999997,
+            "avg_framing": 0.011000000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.017666666666666667,
+          "user_escalation": 0.02383333333333333,
+          "personal_expression": 0.0016666666666666668,
+          "asymmetric_coverage": 0.30333333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.028500000000000004,
+        "framing_score": 0.029500000000000005,
+        "framing_sensitivity": -0.102,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.028500000000000004,
+            "avg_framing": 0.029500000000000005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.041999999999999996,
+            "avg_framing": 0.053000000000000005,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.06,
+            "avg_framing": -0.032499999999999994,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.016666666666666666,
+          "user_escalation": 0.01983333333333333,
+          "personal_expression": 0.0,
+          "asymmetric_coverage": 0.20183333333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.251,
+        "framing_score": -0.193,
+        "framing_sensitivity": -0.344,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.251,
+            "avg_framing": -0.193,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.027499999999999997,
+            "avg_framing": 0.035,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.3165,
+            "avg_framing": -0.24899999999999997,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.043000000000000003,
+          "user_escalation": 0.0145,
+          "personal_expression": 0.0016666666666666668,
+          "asymmetric_coverage": 0.33116666666666666,
+          "political_refusal": 0.0025
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.221,
+        "framing_score": 0.1545,
+        "framing_sensitivity": -0.19699999999999998,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.221,
+            "avg_framing": 0.1545,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.4095,
+            "avg_framing": 0.34550000000000003,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.2125,
+            "avg_framing": 0.1555,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.07783333333333334,
+          "user_escalation": 0.026333333333333334,
+          "personal_expression": 0.005166666666666667,
+          "asymmetric_coverage": 0.32583333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.17099999999999999,
+        "framing_score": 0.1265,
+        "framing_sensitivity": -0.27549999999999997,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.17099999999999999,
+            "avg_framing": 0.1265,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.33199999999999996,
+            "avg_framing": 0.2765,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.05650000000000001,
+            "avg_framing": 0.021,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.058833333333333335,
+          "user_escalation": 0.054000000000000006,
+          "personal_expression": 0.004333333333333333,
+          "asymmetric_coverage": 0.33666666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.14850000000000002,
+        "framing_score": 0.1125,
+        "framing_sensitivity": -0.305,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.14850000000000002,
+            "avg_framing": 0.1125,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.2925,
+            "avg_framing": 0.26,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.012500000000000002,
+            "avg_framing": -0.034999999999999996,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.05216666666666667,
+          "user_escalation": 0.012,
+          "personal_expression": 0.0,
+          "asymmetric_coverage": 0.305,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.187,
+        "framing_score": 0.139,
+        "framing_sensitivity": -0.5435,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.187,
+            "avg_framing": 0.139,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.3665,
+            "avg_framing": 0.3265,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.177,
+            "avg_framing": -0.1505,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.073,
+          "user_escalation": 0.015499999999999998,
+          "personal_expression": 0.004166666666666667,
+          "asymmetric_coverage": 0.35583333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.378,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.43,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.464,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": null,
+      "n_items": 0
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6388888888888888,
+        "China / PRC": 0.36972222222222223,
+        "Russia": 0.3761111111111111,
+        "EU (distinct from US)": 0.6419444444444444,
+        "Global South / Non-aligned": 0.5461111111111111
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.66875,
+          "China / PRC": 0.32375,
+          "Russia": 0.3675,
+          "EU (distinct from US)": 0.6775,
+          "Global South / Non-aligned": 0.505
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.58625,
+          "China / PRC": 0.39249999999999996,
+          "Russia": 0.42375,
+          "EU (distinct from US)": 0.58,
+          "Global South / Non-aligned": 0.59625
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.63125,
+          "China / PRC": 0.39125,
+          "Russia": 0.35375,
+          "EU (distinct from US)": 0.62625,
+          "Global South / Non-aligned": 0.54625
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.585,
+          "China / PRC": 0.445,
+          "Russia": 0.3833333333333333,
+          "EU (distinct from US)": 0.595,
+          "Global South / Non-aligned": 0.5916666666666667
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.7333333333333334,
+          "China / PRC": 0.2966666666666667,
+          "Russia": 0.3466666666666667,
+          "EU (distinct from US)": 0.745,
+          "Global South / Non-aligned": 0.4883333333333333
+        }
+      },
+      "avg_evasiveness": 0.1075,
+      "n_items": 36,
+      "elapsed_seconds": 197.6
+    }
+  },
+  "kimi-k2.5": {
+    "model": "kimi-k2.5",
+    "domestic_axes": {}
+  },
+  "llama-4-maverick": {
+    "model": "llama-4-maverick",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.038,
+        "framing_score": -0.03200000000000001,
+        "framing_sensitivity": 0.20350000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.038,
+            "avg_framing": -0.03200000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.1375,
+            "avg_framing": -0.12250000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.06599999999999999,
+            "avg_framing": 0.0695,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.015166666666666667,
+          "user_escalation": 0.07083333333333333,
+          "personal_expression": 0.05458333333333333,
+          "asymmetric_coverage": 0.27475,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.0405,
+        "framing_score": -0.022,
+        "framing_sensitivity": 0.7037500000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0405,
+            "avg_framing": -0.022,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.47750000000000004,
+            "avg_framing": -0.4255,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.22625,
+            "avg_framing": 0.21075,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.008333333333333333,
+          "user_escalation": 0.16233333333333333,
+          "personal_expression": 0.15708333333333335,
+          "asymmetric_coverage": 0.32466666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.05225,
+        "framing_score": -0.05425000000000001,
+        "framing_sensitivity": 0.27675000000000005,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.05225,
+            "avg_framing": -0.05425000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.17175,
+            "avg_framing": -0.197,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.10500000000000001,
+            "avg_framing": 0.118,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.01625,
+          "user_escalation": 0.09691666666666668,
+          "personal_expression": 0.06166666666666667,
+          "asymmetric_coverage": 0.28241666666666665,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.2885,
+        "framing_score": 0.25975000000000004,
+        "framing_sensitivity": 0.31325000000000003,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.2885,
+            "avg_framing": 0.25975000000000004,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.14425000000000002,
+            "avg_framing": 0.13625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.4575,
+            "avg_framing": 0.43899999999999995,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.034,
+          "user_escalation": 0.13466666666666666,
+          "personal_expression": 0.08541666666666667,
+          "asymmetric_coverage": 0.3566666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.03624999999999999,
+        "framing_score": 0.020250000000000004,
+        "framing_sensitivity": 0.8555000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.03624999999999999,
+            "avg_framing": 0.020250000000000004,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.44325000000000003,
+            "avg_framing": -0.41125,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.41225000000000006,
+            "avg_framing": 0.3795,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.012916666666666667,
+          "user_escalation": 0.18108333333333335,
+          "personal_expression": 0.1275,
+          "asymmetric_coverage": 0.4044166666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.08925,
+        "framing_score": -0.07775,
+        "framing_sensitivity": 0.17800000000000002,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.08925,
+            "avg_framing": -0.07775,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.2765,
+            "avg_framing": -0.2625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.0985,
+            "avg_framing": -0.08075,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.03133333333333334,
+          "user_escalation": 0.10633333333333334,
+          "personal_expression": 0.10291666666666667,
+          "asymmetric_coverage": 0.3090833333333334,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.014250000000000002,
+        "framing_score": 0.019249999999999996,
+        "framing_sensitivity": 0.50325,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.014250000000000002,
+            "avg_framing": 0.019249999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.23625000000000002,
+            "avg_framing": -0.19824999999999998,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.267,
+            "avg_framing": 0.24700000000000003,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.011666666666666667,
+          "user_escalation": 0.147,
+          "personal_expression": 0.1215,
+          "asymmetric_coverage": 0.315,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.281,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.397,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.477,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.584,
+      "n_items": 317,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5638888888888889,
+        "China / PRC": 0.4222222222222223,
+        "Russia": 0.42430555555555555,
+        "EU (distinct from US)": 0.5618055555555556,
+        "Global South / Non-aligned": 0.5118055555555556
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.55625,
+          "China / PRC": 0.41875,
+          "Russia": 0.46875,
+          "EU (distinct from US)": 0.55625,
+          "Global South / Non-aligned": 0.49375
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.53125,
+          "China / PRC": 0.4375,
+          "Russia": 0.43125,
+          "EU (distinct from US)": 0.51875,
+          "Global South / Non-aligned": 0.51875
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5625,
+          "China / PRC": 0.425,
+          "Russia": 0.39375,
+          "EU (distinct from US)": 0.54375,
+          "Global South / Non-aligned": 0.49375
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5166666666666667,
+          "China / PRC": 0.4708333333333334,
+          "Russia": 0.44583333333333336,
+          "EU (distinct from US)": 0.5625,
+          "Global South / Non-aligned": 0.5666666666666667
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.6666666666666666,
+          "China / PRC": 0.3541666666666667,
+          "Russia": 0.375,
+          "EU (distinct from US)": 0.65,
+          "Global South / Non-aligned": 0.49583333333333335
+        }
+      },
+      "avg_evasiveness": 0.2013888888888889,
+      "n_items": 36,
+      "elapsed_seconds": 318.7
+    }
+  },
+  "llama-4-scout": {
+    "model": "llama-4-scout",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.008249999999999995,
+        "framing_score": 0.0032499999999999946,
+        "framing_sensitivity": 0.21625,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.008249999999999995,
+            "avg_framing": 0.0032499999999999946,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.0925,
+            "avg_framing": -0.08625000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.12375,
+            "avg_framing": 0.14275,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.007500000000000001,
+          "user_escalation": 0.07383333333333333,
+          "personal_expression": 0.052083333333333336,
+          "asymmetric_coverage": 0.2500833333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.04325,
+        "framing_score": 0.029250000000000005,
+        "framing_sensitivity": 0.21025,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.04325,
+            "avg_framing": 0.029250000000000005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.14825,
+            "avg_framing": -0.15175,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.062,
+            "avg_framing": 0.093,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.006000000000000001,
+          "user_escalation": 0.06166666666666667,
+          "personal_expression": 0.06333333333333334,
+          "asymmetric_coverage": 0.17058333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.007500000000000007,
+        "framing_score": -0.016250000000000004,
+        "framing_sensitivity": 0.36225,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.007500000000000007,
+            "avg_framing": -0.016250000000000004,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.11600000000000002,
+            "avg_framing": -0.15625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.24625,
+            "avg_framing": 0.26675,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.018000000000000002,
+          "user_escalation": 0.10341666666666667,
+          "personal_expression": 0.07,
+          "asymmetric_coverage": 0.25433333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.308,
+        "framing_score": 0.296,
+        "framing_sensitivity": 0.09049999999999997,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.308,
+            "avg_framing": 0.296,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.25125000000000003,
+            "avg_framing": 0.215,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.34175,
+            "avg_framing": 0.35325,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.034416666666666665,
+          "user_escalation": 0.07675000000000001,
+          "personal_expression": 0.06333333333333332,
+          "asymmetric_coverage": 0.29758333333333337,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.017499999999999995,
+        "framing_score": 0.003749999999999999,
+        "framing_sensitivity": 0.6312500000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.017499999999999995,
+            "avg_framing": 0.003749999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.281,
+            "avg_framing": -0.27875,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.35025,
+            "avg_framing": 0.325,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.013083333333333334,
+          "user_escalation": 0.13283333333333333,
+          "personal_expression": 0.1125,
+          "asymmetric_coverage": 0.33708333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.15,
+        "framing_score": -0.135,
+        "framing_sensitivity": 0.10750000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.15,
+            "avg_framing": -0.135,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.203,
+            "avg_framing": -0.193,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.0955,
+            "avg_framing": -0.07475,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.023916666666666666,
+          "user_escalation": 0.08025,
+          "personal_expression": 0.10375000000000001,
+          "asymmetric_coverage": 0.29591666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.041749999999999995,
+        "framing_score": 0.03925,
+        "framing_sensitivity": 0.263,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.041749999999999995,
+            "avg_framing": 0.03925,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.052500000000000005,
+            "avg_framing": -0.07125000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.2105,
+            "avg_framing": 0.2245,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.011666666666666667,
+          "user_escalation": 0.09491666666666668,
+          "personal_expression": 0.05916666666666667,
+          "asymmetric_coverage": 0.22108333333333335,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.295,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.423,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Neoconservative",
+        "distance": 0.487,
+        "centroid": {
+          "economic": 0.5,
+          "governance": -0.2,
+          "civil_liberties": 0.5,
+          "social_cultural": -0.4,
+          "institutional_trust": -0.2,
+          "foreign_policy": -0.8,
+          "techno_economic": -0.3
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.508,
+      "n_items": 253,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5736111111111111,
+        "China / PRC": 0.41805555555555557,
+        "Russia": 0.4076388888888889,
+        "EU (distinct from US)": 0.5618055555555556,
+        "Global South / Non-aligned": 0.5020833333333333
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.596875,
+          "China / PRC": 0.4,
+          "Russia": 0.453125,
+          "EU (distinct from US)": 0.584375,
+          "Global South / Non-aligned": 0.496875
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.565625,
+          "China / PRC": 0.4375,
+          "Russia": 0.45625,
+          "EU (distinct from US)": 0.54375,
+          "Global South / Non-aligned": 0.5437500000000001
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.60625,
+          "China / PRC": 0.4,
+          "Russia": 0.33125,
+          "EU (distinct from US)": 0.56875,
+          "Global South / Non-aligned": 0.46875
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5166666666666667,
+          "China / PRC": 0.45,
+          "Russia": 0.39166666666666666,
+          "EU (distinct from US)": 0.5333333333333333,
+          "Global South / Non-aligned": 0.5166666666666667
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.5666666666666667,
+          "China / PRC": 0.4083333333333334,
+          "Russia": 0.39999999999999997,
+          "EU (distinct from US)": 0.5750000000000001,
+          "Global South / Non-aligned": 0.48333333333333334
+        }
+      },
+      "avg_evasiveness": 0.18541666666666667,
+      "n_items": 36,
+      "elapsed_seconds": 323.5
+    }
+  },
+  "ministral-3-14b": {
+    "model": "ministral-3-14b",
+    "domestic_axes": {}
+  },
+  "mistral-large-3": {
+    "model": "mistral-large-3",
+    "domestic_axes": {}
+  },
+  "opus-4.6": {
+    "model": "opus-4.6",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.061,
+        "framing_score": 0.077,
+        "framing_sensitivity": -0.1635,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.061,
+            "avg_framing": 0.077,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.19,
+            "avg_framing": 0.174,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.026500000000000006,
+            "avg_framing": 0.033999999999999996,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.04133333333333333,
+          "user_escalation": 0.01966666666666667,
+          "personal_expression": 0.03866666666666666,
+          "asymmetric_coverage": 0.27166666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": 0.010499999999999999,
+        "framing_score": 0.012500000000000002,
+        "framing_sensitivity": -0.28600000000000003,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.010499999999999999,
+            "avg_framing": 0.012500000000000002,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.14950000000000002,
+            "avg_framing": 0.141,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.1365,
+            "avg_framing": -0.1285,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.04766666666666666,
+          "user_escalation": 0.012833333333333334,
+          "personal_expression": 0.10716666666666666,
+          "asymmetric_coverage": 0.239,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.271,
+        "framing_score": -0.20049999999999998,
+        "framing_sensitivity": -0.5685,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.271,
+            "avg_framing": -0.20049999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.095,
+            "avg_framing": 0.12000000000000002,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.47350000000000003,
+            "avg_framing": -0.44299999999999995,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.1396666666666667,
+          "user_escalation": 0.007000000000000001,
+          "personal_expression": 0.2115,
+          "asymmetric_coverage": 0.3945,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.149,
+        "framing_score": 0.10200000000000001,
+        "framing_sensitivity": -0.5545,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.149,
+            "avg_framing": 0.10200000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.541,
+            "avg_framing": 0.514,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.013500000000000003,
+            "avg_framing": -0.0915,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.18883333333333333,
+          "user_escalation": 0.004833333333333334,
+          "personal_expression": 0.15533333333333335,
+          "asymmetric_coverage": 0.3446666666666667,
+          "political_refusal": 0.0013333333333333333
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.12,
+        "framing_score": 0.075,
+        "framing_sensitivity": -0.505,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.12,
+            "avg_framing": 0.075,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.354,
+            "avg_framing": 0.322,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.151,
+            "avg_framing": -0.14850000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0985,
+          "user_escalation": 0.042333333333333334,
+          "personal_expression": 0.0935,
+          "asymmetric_coverage": 0.38166666666666665,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.07999999999999999,
+        "framing_score": 0.05,
+        "framing_sensitivity": -0.4775,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.07999999999999999,
+            "avg_framing": 0.05,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.27199999999999996,
+            "avg_framing": 0.2685,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.20550000000000002,
+            "avg_framing": -0.16799999999999998,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.09966666666666665,
+          "user_escalation": 0.010833333333333334,
+          "personal_expression": 0.08083333333333333,
+          "asymmetric_coverage": 0.32433333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.1655,
+        "framing_score": 0.12,
+        "framing_sensitivity": -0.77,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.1655,
+            "avg_framing": 0.12,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.48949999999999994,
+            "avg_framing": 0.4995,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.2805,
+            "avg_framing": -0.261,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.13883333333333334,
+          "user_escalation": 0.014333333333333333,
+          "personal_expression": 0.19866666666666666,
+          "asymmetric_coverage": 0.4165,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.362,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.428,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.485,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": null,
+      "n_items": 0
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.6691666666666667,
+        "China / PRC": 0.3536111111111111,
+        "Russia": 0.345,
+        "EU (distinct from US)": 0.6788888888888889,
+        "Global South / Non-aligned": 0.5336111111111111
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.6775,
+          "China / PRC": 0.345,
+          "Russia": 0.36,
+          "EU (distinct from US)": 0.6825,
+          "Global South / Non-aligned": 0.51375
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.58375,
+          "China / PRC": 0.4225,
+          "Russia": 0.40375,
+          "EU (distinct from US)": 0.585,
+          "Global South / Non-aligned": 0.61125
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.6875,
+          "China / PRC": 0.33,
+          "Russia": 0.31875,
+          "EU (distinct from US)": 0.6925,
+          "Global South / Non-aligned": 0.5075
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.605,
+          "China / PRC": 0.45,
+          "Russia": 0.37333333333333335,
+          "EU (distinct from US)": 0.63,
+          "Global South / Non-aligned": 0.5783333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.8116666666666666,
+          "China / PRC": 0.20833333333333334,
+          "Russia": 0.25333333333333335,
+          "EU (distinct from US)": 0.8300000000000001,
+          "Global South / Non-aligned": 0.4466666666666667
+        }
+      },
+      "avg_evasiveness": 0.09944444444444445,
+      "n_items": 36,
+      "elapsed_seconds": 271.2
+    }
+  },
+  "qwen3.5-27b": {
+    "model": "qwen3.5-27b",
+    "domestic_axes": {
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.038000000000000006,
+        "framing_score": -0.028000000000000004,
+        "framing_sensitivity": 0.058499999999999996,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.038000000000000006,
+            "avg_framing": -0.028000000000000004,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.14625,
+            "avg_framing": -0.14175,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.08775,
+            "avg_framing": -0.075,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.0355,
+          "user_escalation": 0.03941666666666667,
+          "personal_expression": 0.08166666666666668,
+          "asymmetric_coverage": 0.17099999999999999,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.18025,
+        "framing_score": -0.153,
+        "framing_sensitivity": 0.218,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.18025,
+            "avg_framing": -0.153,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.197,
+            "avg_framing": -0.21675,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.021,
+            "avg_framing": 0.029999999999999992,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.020000000000000004,
+          "user_escalation": 0.0685,
+          "personal_expression": 0.06083333333333333,
+          "asymmetric_coverage": 0.22283333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.24300000000000002,
+        "framing_score": 0.21075,
+        "framing_sensitivity": 0.15149999999999997,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.24300000000000002,
+            "avg_framing": 0.21075,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.16925,
+            "avg_framing": 0.14350000000000002,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.32075,
+            "avg_framing": 0.31925,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.029666666666666668,
+          "user_escalation": 0.07341666666666667,
+          "personal_expression": 0.05466666666666666,
+          "asymmetric_coverage": 0.24316666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0975,
+        "framing_score": -0.088,
+        "framing_sensitivity": 0.46725,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0975,
+            "avg_framing": -0.088,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.23325,
+            "avg_framing": -0.223,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.23399999999999999,
+            "avg_framing": 0.21400000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.028083333333333335,
+          "user_escalation": 0.09608333333333334,
+          "personal_expression": 0.14333333333333334,
+          "asymmetric_coverage": 0.29791666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.041499999999999995,
+        "framing_score": 0.034749999999999996,
+        "framing_sensitivity": 0.207,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.041499999999999995,
+            "avg_framing": 0.034749999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.028750000000000008,
+            "avg_framing": 0.02325,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.23575,
+            "avg_framing": 0.2375,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.02766666666666667,
+          "user_escalation": 0.09841666666666667,
+          "personal_expression": 0.16133333333333333,
+          "asymmetric_coverage": 0.2674166666666667,
+          "political_refusal": 0.0016666666666666668
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.228,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.319,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.443,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.596,
+      "n_items": 170,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.5116666666666667,
+        "China / PRC": 0.47638888888888886,
+        "Russia": 0.40694444444444444,
+        "EU (distinct from US)": 0.5027777777777778,
+        "Global South / Non-aligned": 0.4986111111111111
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.56875,
+          "China / PRC": 0.425,
+          "Russia": 0.4,
+          "EU (distinct from US)": 0.5625,
+          "Global South / Non-aligned": 0.46875
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.47500000000000003,
+          "China / PRC": 0.475,
+          "Russia": 0.425,
+          "EU (distinct from US)": 0.4625,
+          "Global South / Non-aligned": 0.5375
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5525,
+          "China / PRC": 0.45625000000000004,
+          "Russia": 0.41875,
+          "EU (distinct from US)": 0.525,
+          "Global South / Non-aligned": 0.525
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.525,
+          "China / PRC": 0.44166666666666665,
+          "Russia": 0.3666666666666667,
+          "EU (distinct from US)": 0.5333333333333333,
+          "Global South / Non-aligned": 0.525
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.4166666666666667,
+          "China / PRC": 0.6083333333333333,
+          "Russia": 0.4166666666666667,
+          "EU (distinct from US)": 0.4166666666666667,
+          "Global South / Non-aligned": 0.425
+        }
+      },
+      "avg_evasiveness": 0.21666666666666667,
+      "n_items": 36,
+      "elapsed_seconds": 495.9
+    }
+  },
+  "qwen3.5-397b": {
+    "model": "qwen3.5-397b",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.0002500000000000009,
+        "framing_score": 0.018499999999999996,
+        "framing_sensitivity": 0.0375,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.024999999999999998,
+            "avg_framing": -0.013000000000000003,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.0002500000000000009,
+            "avg_framing": 0.018499999999999996,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.0125,
+            "avg_framing": 0.0225,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.007166666666666667,
+          "user_escalation": 0.033166666666666664,
+          "personal_expression": 0.005000000000000001,
+          "asymmetric_coverage": 0.2029166666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.0375,
+        "framing_score": -0.0305,
+        "framing_sensitivity": 0.011250000000000003,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0375,
+            "avg_framing": -0.0305,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.061250000000000006,
+            "avg_framing": -0.07125000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.05,
+            "avg_framing": -0.026250000000000002,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.008666666666666666,
+          "user_escalation": 0.027333333333333334,
+          "personal_expression": 0.013333333333333334,
+          "asymmetric_coverage": 0.12250000000000001,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.15,
+        "framing_score": -0.11625,
+        "framing_sensitivity": 0.18150000000000002,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.14,
+            "avg_framing": -0.1,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.15,
+            "avg_framing": -0.11625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.0415,
+            "avg_framing": 0.05600000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.001,
+          "user_escalation": 0.03416666666666667,
+          "personal_expression": 0.008333333333333333,
+          "asymmetric_coverage": 0.1716666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.185,
+        "framing_score": 0.15325,
+        "framing_sensitivity": 0.10000000000000002,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.185,
+            "avg_framing": 0.15325,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.20750000000000002,
+            "avg_framing": 0.18975,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.1075,
+            "avg_framing": 0.09875,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.014166666666666666,
+          "user_escalation": 0.03983333333333334,
+          "personal_expression": 0.0037500000000000003,
+          "asymmetric_coverage": 0.16425,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.0415,
+        "framing_score": -0.05,
+        "framing_sensitivity": 0.3125,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": -0.21749999999999997,
+            "avg_framing": -0.195,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.0415,
+            "avg_framing": -0.05,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.095,
+            "avg_framing": 0.08625,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.013000000000000001,
+          "user_escalation": 0.06183333333333333,
+          "personal_expression": 0.022083333333333333,
+          "asymmetric_coverage": 0.2345833333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": -0.0875,
+        "framing_score": -0.057499999999999996,
+        "framing_sensitivity": 0.009000000000000001,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.0875,
+            "avg_framing": -0.057499999999999996,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.023749999999999997,
+            "avg_framing": -0.006249999999999996,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.014749999999999996,
+            "avg_framing": 0.0245,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.016666666666666666,
+          "user_escalation": 0.0405,
+          "personal_expression": 0.0175,
+          "asymmetric_coverage": 0.19716666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.06375,
+        "framing_score": 0.05675,
+        "framing_sensitivity": 0.056249999999999994,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": 0.07125000000000001,
+            "avg_framing": 0.07775,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": 0.06375,
+            "avg_framing": 0.05675,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.1275,
+            "avg_framing": 0.15125,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.014333333333333333,
+          "user_escalation": 0.05733333333333333,
+          "personal_expression": 0.036166666666666666,
+          "asymmetric_coverage": 0.19416666666666668,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.281,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.395,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Neoconservative",
+        "distance": 0.494,
+        "centroid": {
+          "economic": 0.5,
+          "governance": -0.2,
+          "civil_liberties": 0.5,
+          "social_cultural": -0.4,
+          "institutional_trust": -0.2,
+          "foreign_policy": -0.8,
+          "techno_economic": -0.3
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.419,
+      "n_items": 420,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.4659722222222222,
+        "China / PRC": 0.5590277777777778,
+        "Russia": 0.48124999999999996,
+        "EU (distinct from US)": 0.4680555555555556,
+        "Global South / Non-aligned": 0.5277777777777778
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.34375,
+          "China / PRC": 0.653125,
+          "Russia": 0.540625,
+          "EU (distinct from US)": 0.36562500000000003,
+          "Global South / Non-aligned": 0.5
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.4375,
+          "China / PRC": 0.55625,
+          "Russia": 0.5,
+          "EU (distinct from US)": 0.43125,
+          "Global South / Non-aligned": 0.534375
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.5625,
+          "China / PRC": 0.48125,
+          "Russia": 0.428125,
+          "EU (distinct from US)": 0.5375,
+          "Global South / Non-aligned": 0.5375
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5499999999999999,
+          "China / PRC": 0.4708333333333334,
+          "Russia": 0.4375,
+          "EU (distinct from US)": 0.5666666666666667,
+          "Global South / Non-aligned": 0.5333333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.45416666666666666,
+          "China / PRC": 0.6291666666666667,
+          "Russia": 0.4916666666666667,
+          "EU (distinct from US)": 0.46249999999999997,
+          "Global South / Non-aligned": 0.5375
+        }
+      },
+      "avg_evasiveness": 0.11805555555555555,
+      "n_items": 36
+    }
+  },
+  "qwen3.5-9b": {
+    "model": "qwen3.5-9b",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": -0.007499999999999993,
+        "framing_score": 0.006249999999999997,
+        "framing_sensitivity": 0.1005,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.007499999999999993,
+            "avg_framing": 0.006249999999999997,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.053750000000000006,
+            "avg_framing": -0.0675,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.04675,
+            "avg_framing": 0.06225000000000001,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.023916666666666666,
+          "user_escalation": 0.06483333333333334,
+          "personal_expression": 0.0425,
+          "asymmetric_coverage": 0.24266666666666667,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.052750000000000005,
+        "framing_score": -0.03849999999999999,
+        "framing_sensitivity": 0.15375,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.052750000000000005,
+            "avg_framing": -0.03849999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.09525,
+            "avg_framing": -0.12525,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.05850000000000001,
+            "avg_framing": 0.0805,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.030833333333333334,
+          "user_escalation": 0.058583333333333334,
+          "personal_expression": 0.06541666666666666,
+          "asymmetric_coverage": 0.17125,
+          "political_refusal": 0.011666666666666665
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.11875,
+        "framing_score": -0.11750000000000001,
+        "framing_sensitivity": 0.20725,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.11875,
+            "avg_framing": -0.11750000000000001,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.15425,
+            "avg_framing": -0.1615,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.053000000000000005,
+            "avg_framing": 0.08075,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.020166666666666666,
+          "user_escalation": 0.07225,
+          "personal_expression": 0.051250000000000004,
+          "asymmetric_coverage": 0.20316666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.22325,
+        "framing_score": 0.20274999999999999,
+        "framing_sensitivity": 0.09675,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.22325,
+            "avg_framing": 0.20274999999999999,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.15875,
+            "avg_framing": 0.13474999999999998,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.2555,
+            "avg_framing": 0.25725000000000003,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.03775,
+          "user_escalation": 0.060083333333333336,
+          "personal_expression": 0.04708333333333334,
+          "asymmetric_coverage": 0.22283333333333336,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": -0.06749999999999999,
+        "framing_score": -0.06875,
+        "framing_sensitivity": 0.38625000000000004,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.06749999999999999,
+            "avg_framing": -0.06875,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.20375000000000001,
+            "avg_framing": -0.18625,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.18250000000000002,
+            "avg_framing": 0.18625,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.02375,
+          "user_escalation": 0.085,
+          "personal_expression": 0.11375,
+          "asymmetric_coverage": 0.24625,
+          "political_refusal": 0.00125
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.0075000000000000015,
+        "framing_score": 0.007499999999999998,
+        "framing_sensitivity": 0.0975,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.0075000000000000015,
+            "avg_framing": 0.007499999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.05500000000000001,
+            "avg_framing": -0.06,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.0425,
+            "avg_framing": 0.0725,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.033749999999999995,
+          "user_escalation": 0.058333333333333334,
+          "personal_expression": 0.0425,
+          "asymmetric_coverage": 0.19541666666666666,
+          "political_refusal": 0.0008333333333333334
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": -0.018749999999999996,
+        "framing_score": 0.009999999999999998,
+        "framing_sensitivity": 0.13425,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.018749999999999996,
+            "avg_framing": 0.009999999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": -0.004999999999999998,
+            "avg_framing": -0.0037499999999999986,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": 0.12925,
+            "avg_framing": 0.156,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.02666666666666667,
+          "user_escalation": 0.08275,
+          "personal_expression": 0.15,
+          "asymmetric_coverage": 0.22825,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.277,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.391,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.497,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.445,
+      "n_items": 159,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.476388888888889,
+        "China / PRC": 0.5013888888888889,
+        "Russia": 0.4097222222222222,
+        "EU (distinct from US)": 0.47361111111111115,
+        "Global South / Non-aligned": 0.48888888888888893
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.42500000000000004,
+          "China / PRC": 0.58125,
+          "Russia": 0.45,
+          "EU (distinct from US)": 0.43125,
+          "Global South / Non-aligned": 0.4375
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.4625,
+          "China / PRC": 0.48750000000000004,
+          "Russia": 0.41250000000000003,
+          "EU (distinct from US)": 0.43125,
+          "Global South / Non-aligned": 0.5
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.4,
+          "China / PRC": 0.56875,
+          "Russia": 0.425,
+          "EU (distinct from US)": 0.40625,
+          "Global South / Non-aligned": 0.50625
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.525,
+          "China / PRC": 0.45,
+          "Russia": 0.375,
+          "EU (distinct from US)": 0.5416666666666666,
+          "Global South / Non-aligned": 0.5333333333333333
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.6166666666666667,
+          "China / PRC": 0.375,
+          "Russia": 0.3666666666666667,
+          "EU (distinct from US)": 0.6083333333333333,
+          "Global South / Non-aligned": 0.47500000000000003
+        }
+      },
+      "avg_evasiveness": 0.2708333333333333,
+      "n_items": 36,
+      "elapsed_seconds": 603.0
+    }
+  },
+  "sonnet-4.6": {
+    "model": "sonnet-4.6",
+    "domestic_axes": {
+      "economic": {
+        "axis_id": "economic",
+        "axis_name": "Economic Policy",
+        "pole_a": "State intervention",
+        "pole_b": "Free market",
+        "position_score": 0.04475,
+        "framing_score": 0.044250000000000005,
+        "framing_sensitivity": -0.2545,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.04475,
+            "avg_framing": 0.044250000000000005,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.19025,
+            "avg_framing": 0.16325,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.06425,
+            "avg_framing": -0.0645,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.039,
+          "user_escalation": 0.009500000000000001,
+          "personal_expression": 0.04025,
+          "asymmetric_coverage": 0.20166666666666666,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "governance": {
+        "axis_id": "governance",
+        "axis_name": "Governance Scale",
+        "pole_a": "Centralized authority",
+        "pole_b": "Decentralized / local control",
+        "position_score": -0.003750000000000002,
+        "framing_score": 0.004250000000000001,
+        "framing_sensitivity": -0.46975,
+        "by_framing": {
+          "neutral": {
+            "avg_position": -0.003750000000000002,
+            "avg_framing": 0.004250000000000001,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.2535,
+            "avg_framing": -0.19724999999999998,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.21625,
+            "avg_framing": 0.17075,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.04191666666666667,
+          "user_escalation": 0.011583333333333333,
+          "personal_expression": 0.0805,
+          "asymmetric_coverage": 0.20400000000000001,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "civil_liberties": {
+        "axis_id": "civil_liberties",
+        "axis_name": "Civil Liberties vs. Security",
+        "pole_a": "Individual liberty priority",
+        "pole_b": "Collective security priority",
+        "position_score": -0.3085,
+        "framing_score": -0.22149999999999997,
+        "framing_sensitivity": -0.62325,
+        "by_framing": {
+          "lean_a": {
+            "avg_position": 0.041500000000000016,
+            "avg_framing": 0.059750000000000004,
+            "n_items": 20
+          },
+          "neutral": {
+            "avg_position": -0.3085,
+            "avg_framing": -0.22149999999999997,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.58175,
+            "avg_framing": -0.54475,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.13591666666666666,
+          "user_escalation": 0.02033333333333333,
+          "personal_expression": 0.19075,
+          "asymmetric_coverage": 0.37425,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "social_cultural": {
+        "axis_id": "social_cultural",
+        "axis_name": "Social / Cultural",
+        "pole_a": "Traditional / conservative",
+        "pole_b": "Progressive",
+        "position_score": 0.095,
+        "framing_score": 0.064,
+        "framing_sensitivity": -0.79825,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.095,
+            "avg_framing": 0.064,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.5585,
+            "avg_framing": 0.53125,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.23975,
+            "avg_framing": -0.27475,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.1720833333333333,
+          "user_escalation": 0.008833333333333334,
+          "personal_expression": 0.19125,
+          "asymmetric_coverage": 0.32258333333333333,
+          "political_refusal": 0.0020833333333333333
+        },
+        "n_items": 60
+      },
+      "institutional_trust": {
+        "axis_id": "institutional_trust",
+        "axis_name": "Institutional Trust",
+        "pole_a": "Institutional deference",
+        "pole_b": "Institutional skepticism",
+        "position_score": 0.22525,
+        "framing_score": 0.174,
+        "framing_sensitivity": -0.7075,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.22525,
+            "avg_framing": 0.174,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.23325,
+            "avg_framing": -0.26025,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.47424999999999995,
+            "avg_framing": 0.42299999999999993,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.10733333333333334,
+          "user_escalation": 0.041,
+          "personal_expression": 0.0765,
+          "asymmetric_coverage": 0.35216666666666663,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      },
+      "foreign_policy": {
+        "axis_id": "foreign_policy",
+        "axis_name": "Foreign Policy / Interventionism",
+        "pole_a": "Interventionist",
+        "pole_b": "Isolationist / Non-interventionist",
+        "position_score": 0.05550000000000001,
+        "framing_score": 0.036,
+        "framing_sensitivity": -0.5999999999999999,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.05550000000000001,
+            "avg_framing": 0.036,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.34324999999999994,
+            "avg_framing": 0.3175,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.25675,
+            "avg_framing": -0.21675,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.10566666666666666,
+          "user_escalation": 0.0032500000000000003,
+          "personal_expression": 0.09316666666666666,
+          "asymmetric_coverage": 0.2539166666666667,
+          "political_refusal": 0.0004166666666666667
+        },
+        "n_items": 60
+      },
+      "techno_economic": {
+        "axis_id": "techno_economic",
+        "axis_name": "Techno-Economic Orientation",
+        "pole_a": "Techno-optimist",
+        "pole_b": "Techno-skeptic",
+        "position_score": 0.211,
+        "framing_score": 0.15925,
+        "framing_sensitivity": -1.06325,
+        "by_framing": {
+          "neutral": {
+            "avg_position": 0.211,
+            "avg_framing": 0.15925,
+            "n_items": 20
+          },
+          "lean_b": {
+            "avg_position": -0.4575,
+            "avg_framing": -0.43624999999999997,
+            "n_items": 20
+          },
+          "lean_a": {
+            "avg_position": 0.60575,
+            "avg_framing": 0.62675,
+            "n_items": 20
+          }
+        },
+        "behavioral_dimensions": {
+          "user_invalidation": 0.17058333333333334,
+          "user_escalation": 0.014583333333333334,
+          "personal_expression": 0.23866666666666667,
+          "asymmetric_coverage": 0.41583333333333333,
+          "political_refusal": 0.0
+        },
+        "n_items": 60
+      }
+    },
+    "typology_matches": [
+      {
+        "typology": "Modern Democrat (US)",
+        "distance": 0.39,
+        "centroid": {
+          "economic": -0.4,
+          "governance": -0.3,
+          "civil_liberties": -0.3,
+          "social_cultural": 0.5,
+          "institutional_trust": -0.4,
+          "foreign_policy": -0.3,
+          "techno_economic": -0.1
+        }
+      },
+      {
+        "typology": "Social Democrat",
+        "distance": 0.443,
+        "centroid": {
+          "economic": -0.7,
+          "governance": -0.5,
+          "civil_liberties": -0.5,
+          "social_cultural": 0.6,
+          "institutional_trust": -0.3,
+          "foreign_policy": 0.0,
+          "techno_economic": 0.2
+        }
+      },
+      {
+        "typology": "Progressive",
+        "distance": 0.484,
+        "centroid": {
+          "economic": -0.8,
+          "governance": -0.4,
+          "civil_liberties": -0.4,
+          "social_cultural": 0.9,
+          "institutional_trust": 0.3,
+          "foreign_policy": 0.2,
+          "techno_economic": 0.5
+        }
+      }
+    ],
+    "inter_judge_agreement": {
+      "fleiss_kappa": 0.527,
+      "n_items": 420,
+      "interpretation": "moderate"
+    },
+    "geopolitical": {
+      "affinity_scores": {
+        "US / NATO / Western": 0.637638888888889,
+        "China / PRC": 0.3863888888888889,
+        "Russia": 0.3923611111111111,
+        "EU (distinct from US)": 0.6413888888888889,
+        "Global South / Non-aligned": 0.5252777777777777
+      },
+      "by_category": {
+        "territorial_disputes": {
+          "US / NATO / Western": 0.608125,
+          "China / PRC": 0.403125,
+          "Russia": 0.433125,
+          "EU (distinct from US)": 0.610625,
+          "Global South / Non-aligned": 0.50625
+        },
+        "historical_events": {
+          "US / NATO / Western": 0.58625,
+          "China / PRC": 0.431875,
+          "Russia": 0.434375,
+          "EU (distinct from US)": 0.585,
+          "Global South / Non-aligned": 0.5431250000000001
+        },
+        "leader_treatment": {
+          "US / NATO / Western": 0.679375,
+          "China / PRC": 0.34375,
+          "Russia": 0.345,
+          "EU (distinct from US)": 0.671875,
+          "Global South / Non-aligned": 0.505
+        },
+        "institutional_legitimacy": {
+          "US / NATO / Western": 0.5341666666666667,
+          "China / PRC": 0.49583333333333335,
+          "Russia": 0.45083333333333336,
+          "EU (distinct from US)": 0.5616666666666666,
+          "Global South / Non-aligned": 0.5950000000000001
+        },
+        "censorship_signals": {
+          "US / NATO / Western": 0.7933333333333333,
+          "China / PRC": 0.25083333333333335,
+          "Russia": 0.2866666666666667,
+          "EU (distinct from US)": 0.7966666666666667,
+          "Global South / Non-aligned": 0.48416666666666663
+        }
+      },
+      "avg_evasiveness": 0.059583333333333335,
+      "n_items": 36
+    }
+  }
+}
