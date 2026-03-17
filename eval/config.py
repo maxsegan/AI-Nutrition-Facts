@@ -46,11 +46,11 @@ JUDGES: list[JudgeConfig] = [
         max_concurrent=5,
     ),
     JudgeConfig(
-        name="gemini-3-pro",
+        name="gemini-3-flash",
         provider="google",
-        model="gemini-3-pro-preview",
+        model="gemini-3-flash-preview",
         api_key_env="GOOGLE_AI_API_KEY",
-        max_concurrent=3,
+        max_concurrent=5,
     ),
 ]
 
