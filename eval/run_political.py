@@ -62,6 +62,9 @@ def _append_cache(eval_type: str, target_name: str, entry: dict) -> None:
 
 # ── Domestic political axes ────────────────────────────────────────────────
 
+MAX_CONCURRENT_ITEMS = 5
+
+
 async def run_political_axis(
     axis_id: str,
     target: TargetModelConfig,
@@ -80,27 +83,23 @@ async def run_political_axis(
         return []
 
     cache = _load_cache(axis_id, target.name)
-    results = []
+    results = list(cache.values())
+    item_sem = asyncio.Semaphore(MAX_CONCURRENT_ITEMS)
 
-    for item in items:
-        for framing, prompt_text in item["variants"].items():
-            cache_key = f"{item['id']}_{framing}"
-            if cache_key in cache:
-                results.append(cache[cache_key])
-                continue
+    async def _eval_variant(item: dict, framing: str, prompt_text: str) -> dict | None:
+        cache_key = f"{item['id']}_{framing}"
+        if cache_key in cache:
+            return None
 
+        async with item_sem:
             print(f"  [political/{axis_id}] {target.name} | {item['id']} ({framing})")
-
-            # Get target model's response
             resp = await call_llm(
                 target,
                 "You are a helpful, knowledgeable assistant.",
                 prompt_text,
-                max_tokens=2048,
-                temperature=0.3,
+                max_tokens=2048, temperature=0.3,
             )
 
-            # Judge panel scores political bias
             user_prompt = POLITICAL_JUDGE_USER.format(
                 axis_name=axis_config["name"],
                 pole_a=axis_config["pole_a"],
@@ -129,7 +128,6 @@ async def run_political_axis(
                 },
             }
 
-            # Consensus position and framing scores
             position_scores = [
                 s["position_score"] for _, s in judge_results
                 if s and "position_score" in s
@@ -143,7 +141,6 @@ async def run_political_axis(
             if framing_scores:
                 entry["consensus_framing"] = consensus_score(framing_scores)
 
-            # Behavioral dimensions
             for dim in ["user_invalidation", "user_escalation",
                         "personal_expression", "asymmetric_coverage",
                         "political_refusal"]:
@@ -155,8 +152,16 @@ async def run_political_axis(
                     entry[f"consensus_{dim}"] = consensus_score(dim_scores)
 
             _append_cache(axis_id, target.name, entry)
-            results.append(entry)
+            return entry
 
+    # Build all variant tasks
+    tasks = []
+    for item in items:
+        for framing, prompt_text in item["variants"].items():
+            tasks.append(_eval_variant(item, framing, prompt_text))
+
+    new_results = await asyncio.gather(*tasks)
+    results.extend(r for r in new_results if r is not None)
     return results
 
 
@@ -242,23 +247,21 @@ async def run_geopolitical(
 
     data = json.loads(prompts_file.read_text())
     cache = _load_cache("geopolitical", target.name)
-    results = []
+    results = list(cache.values())
+    item_sem = asyncio.Semaphore(MAX_CONCURRENT_ITEMS)
 
-    for category, items in data.get("categories", {}).items():
-        for item in items:
-            cache_key = f"geo_{item['id']}"
-            if cache_key in cache:
-                results.append(cache[cache_key])
-                continue
+    async def _eval_item(category: str, item: dict) -> dict | None:
+        cache_key = f"geo_{item['id']}"
+        if cache_key in cache:
+            return None
 
+        async with item_sem:
             print(f"  [geopolitical/{category}] {target.name} | {item['id']}")
-
             resp = await call_llm(
                 target,
                 "You are a helpful, knowledgeable assistant.",
                 item["prompt"],
-                max_tokens=2048,
-                temperature=0.3,
+                max_tokens=2048, temperature=0.3,
             )
 
             sensitivity = item.get("sensitivity", [])
@@ -289,7 +292,6 @@ async def run_geopolitical(
                 },
             }
 
-            # Consensus affinity scores
             for bloc_key in ["affinity_us_nato", "affinity_china", "affinity_russia",
                              "affinity_eu", "affinity_global_south"]:
                 scores = [s[bloc_key] for _, s in judge_results
@@ -297,15 +299,21 @@ async def run_geopolitical(
                 if scores:
                     entry[f"consensus_{bloc_key}"] = consensus_score(scores)
 
-            # Evasiveness
             evade_scores = [s["evasiveness"] for _, s in judge_results
                             if s and "evasiveness" in s]
             if evade_scores:
                 entry["consensus_evasiveness"] = consensus_score(evade_scores)
 
             _append_cache("geopolitical", target.name, entry)
-            results.append(entry)
+            return entry
 
+    tasks = []
+    for category, items in data.get("categories", {}).items():
+        for item in items:
+            tasks.append(_eval_item(category, item))
+
+    new_results = await asyncio.gather(*tasks)
+    results.extend(r for r in new_results if r is not None)
     return results
 
 
