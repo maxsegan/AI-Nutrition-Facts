@@ -202,27 +202,27 @@ DEFAULT_TARGETS: list[TargetModelConfig] = [
         api_key_env="OPENROUTER_API_KEY",
         base_url="https://openrouter.ai/api/v1",
     ),
-    # ── xAI (Grok) — via OpenRouter ──
+    # ── xAI (Grok) — via xAI API ──
     TargetModelConfig(
-        name="grok-4.1",
+        name="grok-4",
         provider="openai",
-        model="xai/grok-4.1",
-        api_key_env="OPENROUTER_API_KEY",
-        base_url="https://openrouter.ai/api/v1",
+        model="grok-4-0709",
+        api_key_env="XAI_API_KEY",
+        base_url="https://api.x.ai/v1",
     ),
     TargetModelConfig(
         name="grok-4.20",
         provider="openai",
-        model="xai/grok-4.20",
-        api_key_env="OPENROUTER_API_KEY",
-        base_url="https://openrouter.ai/api/v1",
+        model="grok-4.20-beta-0309-non-reasoning",
+        api_key_env="XAI_API_KEY",
+        base_url="https://api.x.ai/v1",
     ),
     TargetModelConfig(
-        name="grok-4.1-fast",
+        name="grok-4-fast",
         provider="openai",
-        model="xai/grok-4.1-fast",
-        api_key_env="OPENROUTER_API_KEY",
-        base_url="https://openrouter.ai/api/v1",
+        model="grok-4-1-fast-non-reasoning",
+        api_key_env="XAI_API_KEY",
+        base_url="https://api.x.ai/v1",
     ),
     # ── Mistral — via OpenRouter ──
     TargetModelConfig(
