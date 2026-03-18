@@ -159,18 +159,28 @@ async function loadData() {
 }
 
 // ── Helpers ──
+const NO_DATA = '<span class="muted">—</span>';
 function sycoBadge(score) {
+  if (score == null) return NO_DATA;
   const cls = score < 1.5 ? 'badge-good' : score < 3 ? 'badge-ok' : 'badge-bad';
   return `<span class="badge ${cls}">${score.toFixed(2)}</span>`;
 }
 function polBadge(score) {
+  if (score == null) return NO_DATA;
   const a = Math.abs(score);
   const cls = a < 0.15 ? 'badge-good' : a < 0.35 ? 'badge-ok' : 'badge-bad';
   return `<span class="badge ${cls}">${score >= 0 ? '+' : ''}${score.toFixed(2)}</span>`;
 }
 function geoBadge(score) {
+  if (score == null) return NO_DATA;
   const cls = Math.abs(score - 0.5) < 0.1 ? 'badge-neutral' : score > 0.55 ? 'badge-ok' : 'badge-good';
   return `<span class="badge ${cls}">${score.toFixed(2)}</span>`;
+}
+// Get a nested value, returning null (not 0) if missing
+function get(obj, ...keys) {
+  let v = obj;
+  for (const k of keys) { if (v == null) return null; v = v[k]; }
+  return v ?? null;
 }
 function sorted(obj) {
   return Object.entries(obj).sort((a, b) => a[0].localeCompare(b[0]));
@@ -215,7 +225,7 @@ function renderOverview(el) {
           <thead><tr><th>Model</th><th class="num">Aggregate</th><th class="num">Flattery</th><th class="num">Mirroring</th><th class="num">Influenc.</th><th class="num">Conflict</th><th class="num">Demand</th></tr></thead>
           <tbody>${sycoRanked.map(([m,d]) => {
             const s = d.subtypes||{};
-            const gs = k => (s[k]?.overall_score||0).toFixed(1);
+            const gs = k => { const v = get(s,k,'overall_score'); return v != null ? v.toFixed(1) : '—'; };
             return `<tr>
               <td><a onclick="navigate('model','${m}')">${m}</a></td>
               <td class="num">${sycoBadge(d.aggregate_score)}</td>
@@ -235,7 +245,7 @@ function renderOverview(el) {
           <thead><tr><th>Model</th><th class="num">Econ</th><th class="num">Gov</th><th class="num">Civil</th><th class="num">Social</th><th class="num">Inst</th><th class="num">FP</th><th class="num">Tech</th><th>Typology</th></tr></thead>
           <tbody>${sorted(DATA.pol||{}).map(([m,d]) => {
             const da = d.domestic_axes||{};
-            const gs = k => polBadge(da[k]?.position_score||0);
+            const gs = k => polBadge(get(da,k,'position_score'));
             const typo = d.typology_matches?.[0]?.typology||'—';
             return `<tr>
               <td><a onclick="navigate('model','${m}')">${m}</a></td>
@@ -276,7 +286,7 @@ function renderSycophancy(el, detail) {
           <thead><tr><th>Model</th><th class="num">Aggregate</th><th class="num">Flat</th><th class="num">Mirror</th><th class="num">Infl</th><th class="num">Conf</th><th class="num">Demand</th></tr></thead>
           <tbody>${models.map(([m,d]) => {
             const s = d.subtypes||{};
-            const gs = k => `<td class="num"><a onclick="loadSycoDetail('${m}','${k}')">${(s[k]?.overall_score||0).toFixed(1)}</a></td>`;
+            const gs = k => { const v = get(s,k,'overall_score'); return v != null ? `<td class="num"><a onclick="loadSycoDetail('${m}','${k}')">${v.toFixed(1)}</a></td>` : `<td class="num muted">—</td>`; };
             return `<tr><td><a onclick="navigate('model','${m}')">${m}</a></td><td class="num">${sycoBadge(d.aggregate_score)}</td>${gs('flattery')}${gs('opinion_mirroring')}${gs('influencability')}${gs('conflict_avoidance')}${gs('demand_compliance')}</tr>`;
           }).join('')}</tbody>
         </table>
@@ -369,7 +379,7 @@ function renderPolitical(el) {
           <thead><tr><th>Model</th>${axes.map(a => `<th class="num">${axisNames[a]}</th>`).join('')}<th>Typology</th></tr></thead>
           <tbody>${sorted(pol).map(([m,d]) => {
             const da = d.domestic_axes||{};
-            return `<tr><td><a onclick="navigate('model','${m}')">${m}</a></td>${axes.map(a => `<td class="num">${polBadge(da[a]?.position_score||0)}</td>`).join('')}<td class="small">${d.typology_matches?.[0]?.typology||'—'}</td></tr>`;
+            return `<tr><td><a onclick="navigate('model','${m}')">${m}</a></td>${axes.map(a => `<td class="num">${polBadge(get(da,a,'position_score'))}</td>`).join('')}<td class="small">${d.typology_matches?.[0]?.typology||'—'}</td></tr>`;
           }).join('')}</tbody>
         </table>
       </div>
@@ -382,7 +392,7 @@ function renderPolitical(el) {
           <thead><tr><th>Model</th>${blocShort.map(b => `<th class="num">${b}</th>`).join('')}<th class="num">Evasive</th></tr></thead>
           <tbody>${sorted(pol).filter(([m,d]) => d.geopolitical).map(([m,d]) => {
             const g = d.geopolitical;
-            return `<tr><td>${m}</td>${blocs.map(b => `<td class="num mono">${(g.affinity_scores?.[b]||0.5).toFixed(2)}</td>`).join('')}<td class="num mono">${(g.avg_evasiveness||0).toFixed(2)}</td></tr>`;
+            return `<tr><td>${m}</td>${blocs.map(b => { const v = get(g,'affinity_scores',b); return `<td class="num mono">${v != null ? v.toFixed(2) : '—'}</td>`; }).join('')}<td class="num mono">${(g.avg_evasiveness||0).toFixed(2)}</td></tr>`;
           }).join('')}</tbody>
         </table>
       </div>
@@ -404,7 +414,7 @@ function renderModel(el, model) {
       <div class="label-section"><div class="label-row"><span class="name bold">Sycophancy</span><span class="value">${syco.aggregate_score.toFixed(1)}/10</span></div></div>
       <div class="label-thin-rule"></div>
       <div class="label-section">
-        ${Object.entries(st).map(([k,v]) => `<div class="label-row indent"><span class="name">${k.replace(/_/g,' ')}</span><span class="value">${(v.overall_score||0).toFixed(1)}</span></div>`).join('')}
+        ${Object.entries(st).map(([k,v]) => `<div class="label-row indent"><span class="name">${k.replace(/_/g,' ')}</span><span class="value">${v.overall_score != null ? v.overall_score.toFixed(1) : '—'}</span></div>`).join('')}
       </div><div class="label-thin-rule"></div>`;
   }
   if (pol?.domestic_axes) {

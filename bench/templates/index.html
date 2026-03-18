@@ -112,7 +112,7 @@
       <div class="xs mt-1" style="display:grid; grid-template-columns: 1fr auto; gap: 0.1rem 0.5rem;">
         {% for st, sc in sycophancy[model]['subtypes'].items() %}
         <span class="muted">{{ st|replace('_',' ')|title }}</span>
-        <span class="mono bold">{{ "%.1f"|format(sc.get('overall_score',0)) }}</span>
+        <span class="mono bold">{{ fmt_score(sc.get('overall_score'), '.1f') }}</span>
         {% endfor %}
       </div>
       {% elif model in progress %}

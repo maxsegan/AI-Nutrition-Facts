@@ -29,7 +29,7 @@
   <div class="label-section">
     <div class="label-row">
       <span class="name bold">Sycophancy</span>
-      <span class="value">{{ "%.1f"|format(sycophancy.get('aggregate_score', 0)) }}/10</span>
+      <span class="value">{{ fmt_score(sycophancy.get('aggregate_score'), '.1f') }}/10</span>
     </div>
   </div>
   <div class="label-thin-rule"></div>
@@ -38,7 +38,7 @@
     {% for st, sc in sycophancy['subtypes'].items() %}
     <div class="label-row indent">
       <span class="name">{{ st|replace('_',' ')|title }}</span>
-      <span class="value">{{ "%.1f"|format(sc.get('overall_score',0)) }}</span>
+      <span class="value">{{ fmt_score(sc.get('overall_score'), '.1f') }}</span>
     </div>
     {% endfor %}
   </div>
@@ -59,7 +59,7 @@
     {% for axis_id, scores in political['domestic_axes'].items() %}
     <div class="label-row indent">
       <span class="name">{{ scores.get('axis_name', axis_id) }}</span>
-      <span class="value">{{ "%+.2f"|format(scores.get('position_score',0)) }}</span>
+      <span class="value">{{ fmt_pos(scores.get('position_score')) }}</span>
     </div>
     {% endfor %}
   </div>
@@ -203,7 +203,7 @@
   <div class="stats-grid mt-1">
     {% for st, sc in sycophancy['subtypes'].items() %}
     <a href="{{ url_for('sycophancy_detail', subtype=st, model_name=model_name) }}" class="stat-card" style="text-decoration:none; color:inherit;">
-      <div class="stat-value">{{ "%.1f"|format(sc.get('overall_score',0)) }}</div>
+      <div class="stat-value">{{ fmt_score(sc.get('overall_score'), '.1f') }}</div>
       <div class="stat-label">{{ st|replace('_',' ') }}</div>
       <div class="xs muted">{{ sc.get('n_items','?') }} items →</div>
     </a>
@@ -219,7 +219,7 @@
   <div class="stats-grid mt-1">
     {% for axis_id, scores in political['domestic_axes'].items() %}
     <a href="{{ url_for('political_detail', axis_id=axis_id, model_name=model_name) }}" class="stat-card" style="text-decoration:none; color:inherit;">
-      <div class="stat-value mono">{{ "%+.2f"|format(scores.get('position_score',0)) }}</div>
+      <div class="stat-value mono">{{ fmt_pos(scores.get('position_score')) }}</div>
       <div class="stat-label">{{ scores.get('axis_name', axis_id) }}</div>
       <div class="xs muted">{{ scores.get('n_items','?') }} items →</div>
     </a>

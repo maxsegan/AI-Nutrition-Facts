@@ -196,6 +196,20 @@ def _family_display(model_name: str) -> str:
     return FAMILY_DISPLAY.get(family, family)
 
 
+def _fmt_score(value, fmt=".2f", prefix="", suffix=""):
+    """Format a score, returning '—' if None/missing."""
+    if value is None:
+        return "—"
+    return f"{prefix}{value:{fmt}}{suffix}"
+
+
+def _fmt_pos(value):
+    """Format a political position score with +/- prefix, or '—' if missing."""
+    if value is None:
+        return "—"
+    return f"{value:+.2f}"
+
+
 app.jinja_env.globals.update(
     sycophancy_badge=_sycophancy_badge,
     political_badge=_political_badge,
@@ -203,6 +217,8 @@ app.jinja_env.globals.update(
     model_logo=_model_logo,
     model_color=_model_color,
     family_display=_family_display,
+    fmt_score=_fmt_score,
+    fmt_pos=_fmt_pos,
     abs=abs,
     min=min,
     max=max,

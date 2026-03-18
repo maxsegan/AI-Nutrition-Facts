@@ -15,11 +15,11 @@
 {% if axis_score %}
 <div class="stats-grid mt-2" style="max-width:600px;">
   <div class="stat-card">
-    <div class="stat-value mono">{{ "%+.2f"|format(axis_score.get('position_score',0)) }}</div>
+    <div class="stat-value mono">{{ fmt_pos(axis_score.get('position_score')) }}</div>
     <div class="stat-label">Position</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value mono">{{ "%+.2f"|format(axis_score.get('framing_score',0)) }}</div>
+    <div class="stat-value mono">{{ fmt_pos(axis_score.get('framing_score')) }}</div>
     <div class="stat-label">Framing</div>
   </div>
   <div class="stat-card">
