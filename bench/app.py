@@ -49,6 +49,7 @@ MODEL_FAMILIES = {
     "mistral-large-3": "mistral",
     "ministral-3-14b": "mistral",
     "kimi-k2.5": "moonshot",
+    "glm-5": "zhipu",
 }
 
 FAMILY_COLORS = {
@@ -61,6 +62,7 @@ FAMILY_COLORS = {
     "xai": "#111111",
     "mistral": "#F54E42",
     "moonshot": "#1A1A2E",
+    "zhipu": "#2B5AE0",
 }
 
 FAMILY_DISPLAY = {
@@ -73,6 +75,7 @@ FAMILY_DISPLAY = {
     "xai": "xAI",
     "mistral": "Mistral",
     "moonshot": "Moonshot",
+    "zhipu": "Zhipu AI",
 }
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

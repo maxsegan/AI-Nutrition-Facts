@@ -247,6 +247,14 @@ DEFAULT_TARGETS: list[TargetModelConfig] = [
         api_key_env="OPENROUTER_API_KEY",
         base_url="https://openrouter.ai/api/v1",
     ),
+    # ── Zhipu AI (GLM) — via OpenRouter ──
+    TargetModelConfig(
+        name="glm-5",
+        provider="openai",
+        model="z-ai/glm-5",
+        api_key_env="OPENROUTER_API_KEY",
+        base_url="https://openrouter.ai/api/v1",
+    ),
 ]
 
 
