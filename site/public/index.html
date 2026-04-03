@@ -121,6 +121,34 @@ td a:hover { text-decoration: underline; }
 .rubric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; background: var(--border-thin); border: 1px solid var(--border-thin); }
 .rubric-card { background: var(--bg); padding: 1rem; }
 .rubric-card h4 { font-weight: 800; font-size: 0.95rem; margin-bottom: 0.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+
+/* Visualization experiments */
+.viz-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.viz-card { background: var(--bg); border: 1px solid var(--border-thin); padding: 1.25rem; }
+.viz-card-title { font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--border); }
+
+/* Gauge circles */
+.gauge-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.gauge-item { text-align: center; }
+.gauge-item .gauge-label { font-size: 0.7rem; font-weight: 600; color: var(--muted); margin-top: 0.25rem; max-width: 70px; line-height: 1.2; }
+
+/* Horizontal bars */
+.hbar { display: flex; align-items: center; gap: 0.5rem; margin: 0.4rem 0; }
+.hbar-label { width: 120px; text-align: right; font-size: 0.78rem; font-weight: 600; flex-shrink: 0; color: var(--muted); }
+.hbar-track { flex: 1; height: 18px; background: #f0f0f0; border: 1px solid #e0e0e0; position: relative; }
+.hbar-fill { height: 100%; transition: width 0.3s; }
+.hbar-val { width: 40px; font-size: 0.78rem; font-weight: 700; font-family: var(--mono); flex-shrink: 0; }
+
+/* Dot strip */
+.dot-row { display: flex; align-items: center; gap: 0.5rem; margin: 0.55rem 0; }
+.dot-row-label { width: 120px; text-align: right; font-size: 0.78rem; font-weight: 600; flex-shrink: 0; color: var(--muted); }
+.dot-track { flex: 1; height: 6px; background: linear-gradient(90deg, var(--green), var(--yellow), var(--red)); border-radius: 3px; position: relative; }
+.dot-marker { width: 14px; height: 14px; border-radius: 50%; background: var(--text); border: 2px solid #fff; box-shadow: 0 0 0 1px var(--border); position: absolute; top: 50%; transform: translate(-50%, -50%); }
+.dot-row-val { width: 40px; font-size: 0.78rem; font-weight: 700; font-family: var(--mono); flex-shrink: 0; }
+
+/* Radar chart */
+.radar-wrap { display: flex; justify-content: center; align-items: center; }
+.radar-wrap svg text { font-family: var(--font); }
 </style>
 </head>
 <body>
@@ -446,6 +474,166 @@ function renderModel(el, model) {
     }).join('');
   }
 
+  // Build visualization experiments
+  const subtypeNames = {flattery:'Flattery',opinion_mirroring:'Mirroring',influencability:'Influenc.',conflict_avoidance:'Conflict',demand_compliance:'Demand'};
+  const subtypeKeys = ['flattery','opinion_mirroring','influencability','conflict_avoidance','demand_compliance'];
+  const stScores = subtypeKeys.map(k => ({ key: k, name: subtypeNames[k], score: syco?.subtypes?.[k]?.overall_score ?? null })).filter(s => s.score !== null);
+
+  // ── Gauge Circles (filled arc) ──
+  function gaugeCircle(score, max, label, size=68) {
+    const r = (size - 8) / 2;
+    const cx = size/2, cy = size/2;
+    const pct = Math.min(score / max, 1);
+    const color = pct < 0.15 ? 'var(--green)' : pct < 0.3 ? 'var(--yellow)' : 'var(--red)';
+    const circumference = 2 * Math.PI * r;
+    const dashLen = circumference * pct;
+    const gap = circumference - dashLen;
+    return `<div class="gauge-item">
+      <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#eee" stroke-width="5"/>
+        <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${color}" stroke-width="5"
+          stroke-dasharray="${dashLen} ${gap}" stroke-linecap="round"
+          transform="rotate(-90 ${cx} ${cy})"/>
+        <text x="${cx}" y="${cy+1}" text-anchor="middle" dominant-baseline="middle"
+          font-size="14" font-weight="800" font-family="var(--mono)">${score.toFixed(1)}</text>
+      </svg>
+      <div class="gauge-label">${label}</div>
+    </div>`;
+  }
+
+  let gaugeViz = '';
+  if (stScores.length) {
+    gaugeViz = `<div class="viz-card">
+      <div class="viz-card-title">Gauge Circles</div>
+      <div class="gauge-row">
+        ${gaugeCircle(syco.aggregate_score, 10, 'Aggregate', 80)}
+        ${stScores.map(s => gaugeCircle(s.score, 10, s.name)).join('')}
+      </div>
+    </div>`;
+  }
+
+  // ── Horizontal Bars ──
+  let barViz = '';
+  if (stScores.length) {
+    barViz = `<div class="viz-card">
+      <div class="viz-card-title">Horizontal Bars</div>
+      <div class="hbar">
+        <div class="hbar-label" style="font-weight:800">Aggregate</div>
+        <div class="hbar-track"><div class="hbar-fill" style="width:${(syco.aggregate_score/10)*100}%;background:${syco.aggregate_score < 1.5 ? 'var(--green)' : syco.aggregate_score < 3 ? 'var(--yellow)' : 'var(--red)'}"></div></div>
+        <div class="hbar-val">${syco.aggregate_score.toFixed(1)}</div>
+      </div>
+      ${stScores.map(s => {
+        const pct = (s.score/10)*100;
+        const color = s.score < 1.5 ? 'var(--green)' : s.score < 3 ? 'var(--yellow)' : 'var(--red)';
+        return `<div class="hbar"><div class="hbar-label">${s.name}</div><div class="hbar-track"><div class="hbar-fill" style="width:${pct}%;background:${color}"></div></div><div class="hbar-val">${s.score.toFixed(1)}</div></div>`;
+      }).join('')}
+      <div class="xs muted mt-1" style="text-align:right">0 = ideal · 10 = worst</div>
+    </div>`;
+  }
+
+  // ── Dot Strip ──
+  let dotViz = '';
+  if (stScores.length) {
+    dotViz = `<div class="viz-card">
+      <div class="viz-card-title">Dot Strip</div>
+      <div class="dot-row">
+        <div class="dot-row-label" style="font-weight:800">Aggregate</div>
+        <div class="dot-track"><div class="dot-marker" style="left:${(syco.aggregate_score/10)*100}%"></div></div>
+        <div class="dot-row-val">${syco.aggregate_score.toFixed(1)}</div>
+      </div>
+      ${stScores.map(s => `<div class="dot-row"><div class="dot-row-label">${s.name}</div><div class="dot-track"><div class="dot-marker" style="left:${(s.score/10)*100}%"></div></div><div class="dot-row-val">${s.score.toFixed(1)}</div></div>`).join('')}
+      <div class="xs muted mt-1" style="text-align:right">← ideal · worst →</div>
+    </div>`;
+  }
+
+  // ── Radar / Spider Chart (SVG) ──
+  let radarViz = '';
+  if (stScores.length >= 3) {
+    const rSize = 260, rCx = rSize/2, rCy = rSize/2, rMax = 100;
+    const n = stScores.length;
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2;
+    const rScale = (rSize/2 - 40);
+
+    function polarXY(idx, val) {
+      const a = startAngle + idx * angleStep;
+      const r = (val / 10) * rScale;
+      return [rCx + r * Math.cos(a), rCy + r * Math.sin(a)];
+    }
+
+    // Grid rings at 2.5, 5, 7.5, 10
+    let gridSvg = [2.5, 5, 7.5, 10].map(v => {
+      const pts = Array.from({length: n}, (_, i) => polarXY(i, v).join(',')).join(' ');
+      return `<polygon points="${pts}" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>`;
+    }).join('');
+
+    // Axis lines
+    let axisSvg = Array.from({length: n}, (_, i) => {
+      const [x, y] = polarXY(i, 10);
+      return `<line x1="${rCx}" y1="${rCy}" x2="${x}" y2="${y}" stroke="#ddd" stroke-width="0.5"/>`;
+    }).join('');
+
+    // Data polygon
+    const dataPoints = stScores.map((s, i) => polarXY(i, s.score).join(',')).join(' ');
+    const dataColor = syco.aggregate_score < 1.5 ? 'var(--green)' : syco.aggregate_score < 3 ? 'var(--yellow)' : 'var(--red)';
+
+    // Labels
+    let labelSvg = stScores.map((s, i) => {
+      const a = startAngle + i * angleStep;
+      const lr = rScale + 22;
+      const lx = rCx + lr * Math.cos(a);
+      const ly = rCy + lr * Math.sin(a);
+      const anchor = Math.abs(Math.cos(a)) < 0.1 ? 'middle' : Math.cos(a) > 0 ? 'start' : 'end';
+      return `<text x="${lx}" y="${ly}" text-anchor="${anchor}" dominant-baseline="middle" font-size="10" font-weight="600" fill="var(--muted)">${s.name}</text>`;
+    }).join('');
+
+    radarViz = `<div class="viz-card">
+      <div class="viz-card-title">Radar Chart</div>
+      <div class="radar-wrap">
+        <svg width="${rSize}" height="${rSize}" viewBox="0 0 ${rSize} ${rSize}">
+          ${gridSvg}${axisSvg}
+          <polygon points="${dataPoints}" fill="${dataColor}" fill-opacity="0.15" stroke="${dataColor}" stroke-width="2"/>
+          ${stScores.map((s, i) => { const [x,y] = polarXY(i, s.score); return `<circle cx="${x}" cy="${y}" r="3.5" fill="${dataColor}" stroke="#fff" stroke-width="1.5"/>`; }).join('')}
+          ${labelSvg}
+        </svg>
+      </div>
+      <div class="xs muted mt-1" style="text-align:center">Smaller area = better · Scale 0–10</div>
+    </div>`;
+  }
+
+  // ── Political: Lollipop Chart ──
+  let lollipopViz = '';
+  if (pol?.domestic_axes) {
+    const axEntries = axes.map(a => ({ key: a, name: axisNames[a], score: pol.domestic_axes[a]?.position_score ?? null })).filter(e => e.score !== null);
+    if (axEntries.length) {
+      const lH = axEntries.length * 30 + 10;
+      const lW = 340, lMarginL = 130, lMarginR = 40, lTrackW = lW - lMarginL - lMarginR;
+      const lCenter = lMarginL + lTrackW / 2;
+
+      let lollipopSvg = axEntries.map((e, i) => {
+        const y = 15 + i * 30;
+        const x = lCenter + (e.score * lTrackW / 2);
+        const color = e.score < 0 ? 'var(--blue)' : 'var(--red)';
+        return `
+          <text x="${lMarginL - 8}" y="${y+1}" text-anchor="end" font-size="11" font-weight="500" fill="var(--muted)" dominant-baseline="middle">${e.name}</text>
+          <line x1="${lMarginL}" x2="${lMarginL + lTrackW}" y1="${y}" y2="${y}" stroke="#eee" stroke-width="1"/>
+          <line x1="${lCenter}" x2="${x}" y1="${y}" y2="${y}" stroke="${color}" stroke-width="2.5"/>
+          <circle cx="${x}" cy="${y}" r="5" fill="${color}" stroke="#fff" stroke-width="1.5"/>
+          <text x="${lMarginL + lTrackW + 6}" y="${y+1}" font-size="10" font-weight="700" font-family="var(--mono)" fill="var(--text)" dominant-baseline="middle">${e.score >= 0 ? '+' : ''}${e.score.toFixed(2)}</text>
+        `;
+      }).join('');
+
+      lollipopViz = `<div class="viz-card">
+        <div class="viz-card-title">Political Lollipop</div>
+        <svg width="${lW}" height="${lH}" viewBox="0 0 ${lW} ${lH}">
+          <line x1="${lCenter}" y1="0" x2="${lCenter}" y2="${lH}" stroke="var(--border)" stroke-width="1" stroke-dasharray="3,3"/>
+          ${lollipopSvg}
+        </svg>
+        <div class="xs muted mt-1" style="text-align:center">← Pole A · 0 neutral · Pole B →</div>
+      </div>`;
+    }
+  }
+
   el.innerHTML = `
     <p class="small muted"><a onclick="navigate('overview')" style="color:var(--blue);cursor:pointer">Overview</a> / ${model}</p>
     <h1>${model}</h1>
@@ -462,6 +650,13 @@ function renderModel(el, model) {
       <div style="flex:1;min-width:350px">
         ${polBars ? `<div class="card"><div class="card-header">Political Axes</div>${polBars}</div>` : ''}
         ${syco ? `<div class="card"><div class="card-header">Inspect Sycophancy Results</div><p class="small muted">Click a subtype to view every prompt, model response, and judge scores.</p><div class="mt-1">${Object.keys(syco.subtypes||{}).map(st => `<a onclick="loadSycoDetail('${model}','${st}')" style="display:inline-block;padding:0.3rem 0.8rem;margin:0.2rem;border:1px solid var(--border-thin);cursor:pointer;font-size:0.85rem;font-weight:600">${st.replace(/_/g,' ')}</a>`).join('')}</div></div>` : ''}
+      </div>
+    </div>
+    <div class="section">
+      <h2>Visualization Experiments</h2>
+      <p class="muted small">Alternative ways to present the same data — compare and pick what reads best.</p>
+      <div class="viz-grid">
+        ${gaugeViz}${barViz}${dotViz}${radarViz}${lollipopViz}
       </div>
     </div>`;
 }
