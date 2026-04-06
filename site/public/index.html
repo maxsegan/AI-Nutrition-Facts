@@ -59,6 +59,8 @@ td a:hover { text-decoration: underline; }
 .badge-ok { color: var(--yellow); border-color: var(--yellow); background: rgba(212,160,23,0.06); }
 .badge-bad { color: var(--red); border-color: var(--red); background: rgba(192,57,43,0.06); }
 .badge-neutral { color: var(--muted); border-color: var(--border-thin); }
+.badge-blue { color: var(--blue); border-color: var(--blue); background: rgba(36,113,163,0.08); }
+.badge-red { color: var(--red); border-color: var(--red); background: rgba(192,57,43,0.08); }
 .pill { display: inline-block; padding: 0.1rem 0.55rem; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--border-thin); border-radius: 2px; background: #f5f5f5; }
 
 /* Cards */
@@ -196,7 +198,7 @@ function sycoBadge(score) {
 function polBadge(score) {
   if (score == null) return NO_DATA;
   const a = Math.abs(score);
-  const cls = a < 0.15 ? 'badge-good' : a < 0.35 ? 'badge-ok' : 'badge-bad';
+  const cls = a < 0.15 ? 'badge-neutral' : score < 0 ? 'badge-blue' : 'badge-red';
   return `<span class="badge ${cls}">${score >= 0 ? '+' : ''}${score.toFixed(2)}</span>`;
 }
 function geoBadge(score) {
