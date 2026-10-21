@@ -157,12 +157,12 @@ td a:hover { text-decoration: underline; }
 
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" onclick="navigate('overview')">AI Nutrition Facts <span>Benchmark</span></a>
+    <a class="brand" href="/">AI Nutrition Facts <span>Benchmark</span></a>
     <nav class="nav" id="nav">
-      <a onclick="navigate('overview')" data-page="overview" class="active">Overview</a>
-      <a onclick="navigate('sycophancy')" data-page="sycophancy">Sycophancy</a>
-      <a onclick="navigate('political')" data-page="political">Political</a>
-      <a onclick="navigate('methodology')" data-page="methodology">Methodology</a>
+      <a href="/" data-page="overview" class="active">Overview</a>
+      <a href="/sycophancy" data-page="sycophancy">Sycophancy</a>
+      <a href="/political" data-page="political">Political</a>
+      <a href="/methodology" data-page="methodology">Methodology</a>
     </nav>
   </div>
 </header>
@@ -185,7 +185,7 @@ async function loadData() {
     fetch('/data/supplementary_all.json').then(r => r.json()),
   ]);
   DATA = { syco, pol, supp };
-  navigate(currentPage);
+  route();
 }
 
 // ── Helpers ──
@@ -229,6 +229,8 @@ function navigate(page, detail) {
   else if (page === 'methodology') renderMethodology(el);
   else if (page === 'model') renderModel(el, detail);
   else if (page === 'syco_detail') renderSycoDetail(el, detail);
+  const titles = { sycophancy: 'Sycophancy', political: 'Political', methodology: 'Methodology', model: detail, syco_detail: detail?.model };
+  document.title = titles[page] ? `${titles[page]} · AI Nutrition Facts` : 'AI Nutrition Facts';
   window.scrollTo(0, 0);
 }
 
@@ -257,7 +259,7 @@ function renderOverview(el) {
             const s = d.subtypes||{};
             const gs = k => { const v = get(s,k,'overall_score'); return v != null ? v.toFixed(1) : '—'; };
             return `<tr>
-              <td><a onclick="navigate('model','${m}')">${m}</a></td>
+              <td><a href="/model/${m}">${m}</a></td>
               <td class="num">${sycoBadge(d.aggregate_score)}</td>
               <td class="num">${gs('flattery')}</td><td class="num">${gs('opinion_mirroring')}</td>
               <td class="num">${gs('influencability')}</td><td class="num">${gs('conflict_avoidance')}</td>
@@ -278,7 +280,7 @@ function renderOverview(el) {
             const gs = k => polBadge(get(da,k,'position_score'));
             const typo = d.typology_matches?.[0]?.typology||'—';
             return `<tr>
-              <td><a onclick="navigate('model','${m}')">${m}</a></td>
+              <td><a href="/model/${m}">${m}</a></td>
               <td class="num">${gs('economic')}</td><td class="num">${gs('governance')}</td>
               <td class="num">${gs('civil_liberties')}</td><td class="num">${gs('social_cultural')}</td>
               <td class="num">${gs('institutional_trust')}</td><td class="num">${gs('foreign_policy')}</td>
@@ -316,8 +318,8 @@ function renderSycophancy(el, detail) {
           <thead><tr><th>Model</th><th class="num">Aggregate</th><th class="num">Flat</th><th class="num">Mirror</th><th class="num">Infl</th><th class="num">Conf</th><th class="num">Demand</th></tr></thead>
           <tbody>${models.map(([m,d]) => {
             const s = d.subtypes||{};
-            const gs = k => { const v = get(s,k,'overall_score'); return v != null ? `<td class="num"><a onclick="loadSycoDetail('${m}','${k}')">${v.toFixed(1)}</a></td>` : `<td class="num muted">—</td>`; };
-            return `<tr><td><a onclick="navigate('model','${m}')">${m}</a></td><td class="num">${sycoBadge(d.aggregate_score)}</td>${gs('flattery')}${gs('opinion_mirroring')}${gs('influencability')}${gs('conflict_avoidance')}${gs('demand_compliance')}</tr>`;
+            const gs = k => { const v = get(s,k,'overall_score'); return v != null ? `<td class="num"><a href="/model/${m}/${k}">${v.toFixed(1)}</a></td>` : `<td class="num muted">—</td>`; };
+            return `<tr><td><a href="/model/${m}">${m}</a></td><td class="num">${sycoBadge(d.aggregate_score)}</td>${gs('flattery')}${gs('opinion_mirroring')}${gs('influencability')}${gs('conflict_avoidance')}${gs('demand_compliance')}</tr>`;
           }).join('')}</tbody>
         </table>
       </div>
@@ -330,6 +332,7 @@ async function loadSycoDetail(model, subtype) {
     navigate('syco_detail', { model, subtype, items: data[subtype]||[] });
   } catch(e) {
     alert('Detail data not available for this model.');
+    navigate('model', model);
   }
 }
 
@@ -337,7 +340,7 @@ function renderSycoDetail(el, {model, subtype, items}) {
   const subtypeNames = {flattery:'Flattery',opinion_mirroring:'Opinion Mirroring',influencability:'Influencability',conflict_avoidance:'Conflict Avoidance',demand_compliance:'Demand Compliance'};
 
   el.innerHTML = `
-    <p class="small muted"><a onclick="navigate('sycophancy')" style="color:var(--blue);cursor:pointer">Sycophancy</a> / ${model} / ${subtypeNames[subtype]||subtype}</p>
+    <p class="small muted"><a href="/sycophancy" style="color:var(--blue);text-decoration:none">Sycophancy</a> / ${model} / ${subtypeNames[subtype]||subtype}</p>
     <h1>${subtypeNames[subtype]||subtype} — ${model}</h1>
     <p class="muted small">${items.length} items. Click each to expand model response and judge scores.</p>
     <div class="section">
@@ -409,7 +412,7 @@ function renderPolitical(el) {
           <thead><tr><th>Model</th>${axes.map(a => `<th class="num">${axisNames[a]}</th>`).join('')}<th>Typology</th></tr></thead>
           <tbody>${sorted(pol).map(([m,d]) => {
             const da = d.domestic_axes||{};
-            return `<tr><td><a onclick="navigate('model','${m}')">${m}</a></td>${axes.map(a => `<td class="num">${polBadge(get(da,a,'position_score'))}</td>`).join('')}<td class="small">${d.typology_matches?.[0]?.typology||'—'}</td></tr>`;
+            return `<tr><td><a href="/model/${m}">${m}</a></td>${axes.map(a => `<td class="num">${polBadge(get(da,a,'position_score'))}</td>`).join('')}<td class="small">${d.typology_matches?.[0]?.typology||'—'}</td></tr>`;
           }).join('')}</tbody>
         </table>
       </div>
@@ -637,7 +640,7 @@ function renderModel(el, model) {
   }
 
   el.innerHTML = `
-    <p class="small muted"><a onclick="navigate('overview')" style="color:var(--blue);cursor:pointer">Overview</a> / ${model}</p>
+    <p class="small muted"><a href="/" style="color:var(--blue);text-decoration:none">Overview</a> / ${model}</p>
     <h1>${model}</h1>
     <div style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-start" class="mt-2">
       <div class="label">
@@ -651,7 +654,7 @@ function renderModel(el, model) {
       </div>
       <div style="flex:1;min-width:350px">
         ${polBars ? `<div class="card"><div class="card-header">Political Axes</div>${polBars}</div>` : ''}
-        ${syco ? `<div class="card"><div class="card-header">Inspect Sycophancy Results</div><p class="small muted">Click a subtype to view every prompt, model response, and judge scores.</p><div class="mt-1">${Object.keys(syco.subtypes||{}).map(st => `<a onclick="loadSycoDetail('${model}','${st}')" style="display:inline-block;padding:0.3rem 0.8rem;margin:0.2rem;border:1px solid var(--border-thin);cursor:pointer;font-size:0.85rem;font-weight:600">${st.replace(/_/g,' ')}</a>`).join('')}</div></div>` : ''}
+        ${syco ? `<div class="card"><div class="card-header">Inspect Sycophancy Results</div><p class="small muted">Click a subtype to view every prompt, model response, and judge scores.</p><div class="mt-1">${Object.keys(syco.subtypes||{}).map(st => `<a href="/model/${model}/${st}" style="color:var(--text);text-decoration:none;display:inline-block;padding:0.3rem 0.8rem;margin:0.2rem;border:1px solid var(--border-thin);cursor:pointer;font-size:0.85rem;font-weight:600">${st.replace(/_/g,' ')}</a>`).join('')}</div></div>` : ''}
       </div>
     </div>
     <div class="section">
@@ -715,6 +718,30 @@ function renderMethodology(el) {
       </div>
     </div>`;
 }
+
+// ── Routing ──
+// Each page has its own path (vercel.json serves index.html for all of them),
+// so a model page can be linked to: /model/grok-4.20, /model/grok-4.20/flattery.
+function route() {
+  const parts = location.pathname.split('/').filter(Boolean).map(decodeURIComponent);
+  const [page, model, subtype] = parts;
+  const known = m => DATA.syco?.[m] || DATA.pol?.[m] || DATA.supp?.[m];
+  if (!page) navigate('overview');
+  else if (['sycophancy', 'political', 'methodology'].includes(page) && parts.length === 1) navigate(page);
+  else if (page === 'model' && known(model) && parts.length === 2) navigate('model', model);
+  else if (page === 'model' && DATA.syco?.[model]?.subtypes?.[subtype] && parts.length === 3) loadSycoDetail(model, subtype);
+  else { history.replaceState(null, '', '/'); navigate('overview'); }
+}
+
+// Same-site links change the path and re-route instead of reloading the page.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="/"]');
+  if (!a || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+  if (a.getAttribute('href') !== location.pathname) history.pushState(null, '', a.getAttribute('href'));
+  route();
+});
+window.addEventListener('popstate', route);
 
 // Boot
 loadData();
